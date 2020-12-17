@@ -30,22 +30,22 @@ class EventBot(commands.Cog):
 
 	@commands.Cog.listener()
 	async def on_reaction_add(self, reaction, user):
-		# Two subroutines for if user is going or not going
+		# Three subroutines for if user is going, maybe going, or not going
+		optionDict = {GOING_EMOJI:GOING, MAYBE_EMOJI: MAYBE_GOING, NOT_GOING_EMOJI:NOT_GOING}
+		# If the message is by a bot, the reaction is not by a bot, and the message is a raid message
+		if reaction.message.author.bot and not user.bot and 'New raid:' in reaction.message.content:
+			# Call the subroutine with the given emoji
+			await self.updateList(reaction.message, user, optionDict[reaction.emoji])
+
+	@commands.Cog.listener()
+	async def on_reaction_remove(self, reaction, user):
+		# Three subroutines for if user renegs going, maybe going, or not going
 		optionDict = {GOING_EMOJI:GOING, MAYBE_EMOJI: MAYBE_GOING, NOT_GOING_EMOJI:NOT_GOING}
 		# If the message is by a bot, the reaction is not by a bot, and the message is a raid message
 		if reaction.message.author.bot and not user.bot and 'New raid:' in reaction.message.content:
 			# Call the subroutine with the given emoji
 			# TODO: Make this not break for other emojis. Remove them?
-			await self.updateList(reaction.message, user, optionDict[reaction.emoji])
-
-	@commands.Cog.listener()
-	async def on_reaction_remove(self, reaction, user):
-		# TODO: Should I remove a person from the list if they unreact?
-		print("Reaction Removed")
-
-	@commands.command(name='m')
-	async def sendMessage(self, ctx):
-		await ctx.send('Hello!')
+			await self.updateListRemove(reaction.message, user, optionDict[reaction.emoji])
 
 	@commands.command(name='newRaid', aliases = ['n', 'newraid'], help = 'Command to make a new raid')
 	async def newRaid(self, ctx, *input):
@@ -63,7 +63,14 @@ class EventBot(commands.Cog):
 		await raidMsg.add_reaction(MAYBE_EMOJI)
 		await raidMsg.add_reaction(NOT_GOING_EMOJI)
 
+	# This is called if a user removes their emoji from a message
+	async def updateListRemove(self, message, user, statusKey):
+		# Simply remove their name from the given list if they are on the list
+		if user in raidDict[message.id][statusKey]:
+			raidDict[message.id][statusKey].remove(user)
+		await self.updateMessage(message)
 
+	# This is called when a user reacts to a raid
 	async def updateList(self, message, user, statusKey):
 		optionList = [GOING, NOT_GOING, MAYBE_GOING]
 		# If the user isn't already in the given list, add them
@@ -75,6 +82,7 @@ class EventBot(commands.Cog):
 				raidDict[message.id][option].remove(user)
 		await self.updateMessage(message)
 
+	# This is called after the list is updated so we can also update the message
 	async def updateMessage(self, message):
 		# Start with the basic message with info, time, and init
 		updatedMessage = 'New raid: {} \nTime: {} \nInitiator: {}' \
