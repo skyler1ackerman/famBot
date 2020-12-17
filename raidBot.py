@@ -34,8 +34,12 @@ class EventBot(commands.Cog):
 		optionDict = {GOING_EMOJI:GOING, MAYBE_EMOJI: MAYBE_GOING, NOT_GOING_EMOJI:NOT_GOING}
 		# If the message is by a bot, the reaction is not by a bot, and the message is a raid message
 		if reaction.message.author.bot and not user.bot and 'New raid:' in reaction.message.content:
+			if optionDict.get(reaction.emoji):
+				await self.updateList(reaction.message, user, optionDict[reaction.emoji])
+			else:
+				await reaction.message.remove_reaction(reaction.emoji, user)
 			# Call the subroutine with the given emoji
-			await self.updateList(reaction.message, user, optionDict[reaction.emoji])
+			
 
 	@commands.Cog.listener()
 	async def on_reaction_remove(self, reaction, user):
@@ -43,10 +47,10 @@ class EventBot(commands.Cog):
 		optionDict = {GOING_EMOJI:GOING, MAYBE_EMOJI: MAYBE_GOING, NOT_GOING_EMOJI:NOT_GOING}
 		# If the message is by a bot, the reaction is not by a bot, and the message is a raid message
 		if reaction.message.author.bot and not user.bot and 'New raid:' in reaction.message.content:
-			# Call the subroutine with the given emoji
-			# TODO: Make this not break for other emojis. Remove them?
-			await self.updateListRemove(reaction.message, user, optionDict[reaction.emoji])
-
+			if optionDict.get(reaction.emoji):
+				# Call the subroutine with the given emoji
+				await self.updateListRemove(reaction.message, user, optionDict[reaction.emoji])
+			
 	@commands.command(name='newRaid', aliases = ['n', 'newraid'], help = 'Command to make a new raid')
 	async def newRaid(self, ctx, *input):
 		# Use parse to get the datetime object, where ever it is.
