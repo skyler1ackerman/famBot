@@ -51,7 +51,7 @@ class EventBot(commands.Cog):
 				# Call the subroutine with the given emoji
 				await self.updateListRemove(reaction.message, user, optionDict[reaction.emoji])
 			
-	@commands.command(name='newRaid', aliases = ['n', 'newraid'], help = 'Command to make a new raid')
+	@commands.command(name='newRaid', aliases = ['n', 'newraid'], help = 'Command to make a new raid. Try !n Weedle Raid at the Fountain 3:00 pm')
 	async def newRaid(self, ctx, *input):
 		# Use parse to get the datetime object, where ever it is.
 		parsedInput = parse(" ".join(input), fuzzy_with_tokens = True)
