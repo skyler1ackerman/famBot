@@ -7,12 +7,18 @@ from dateutil.parser import parse
 
 raidDict = {}
 
+# Global Variables
+# Dict Keys
 TIME = 'Time'
 INFO = 'Info'
 INIT = 'Init'
 GOING = 'Going'
 NOT_GOING = 'Not_Going'
-
+MAYBE_GOING = 'Maybe Going'
+# Emojis
+GOING_EMOJI = '✅'
+MAYBE_EMOJI = '🟨'
+NOT_GOING_EMOJI = '❌'
 #TODO: Add a maybe option?
 
 def setup(bot):
@@ -25,12 +31,12 @@ class EventBot(commands.Cog):
 	@commands.Cog.listener()
 	async def on_reaction_add(self, reaction, user):
 		# Two subroutines for if user is going or not going
-		optionDict = {'✅':self.userGoing,'❌':self.userNotGoing}
+		optionDict = {GOING_EMOJI:GOING, MAYBE_EMOJI: MAYBE_GOING, NOT_GOING_EMOJI:NOT_GOING}
 		# If the message is by a bot, the reaction is not by a bot, and the message is a raid message
 		if reaction.message.author.bot and not user.bot and 'New raid:' in reaction.message.content:
 			# Call the subroutine with the given emoji
 			# TODO: Make this not break for other emojis. Remove them?
-			await optionDict[reaction.emoji](reaction.message, user)
+			await self.updateList(reaction.message, user, optionDict[reaction.emoji])
 
 	@commands.Cog.listener()
 	async def on_reaction_remove(self, reaction, user):
@@ -51,27 +57,22 @@ class EventBot(commands.Cog):
 		# Send the very first message
 		raidMsg = await ctx.send('New raid: {} \nTime: {} \nInitiator: {}'.format(info, time.strftime('%m-%d-%y %H:%M'), ctx.author.mention))
 		# Save the message ID, time, info, init, and make empty going and not going lists.
-		raidDict[raidMsg.id] = {TIME: time, INFO: info, INIT: ctx.author, GOING: [], NOT_GOING:[] }
-		# Start with two reactions for going and not going
-		await raidMsg.add_reaction('✅')
-		await raidMsg.add_reaction('❌')
+		raidDict[raidMsg.id] = {TIME: time, INFO: info, INIT: ctx.author, GOING: [], MAYBE_GOING: [], NOT_GOING:[] }
+		# Start with thre reactions for going, maybe going, and not going
+		await raidMsg.add_reaction(GOING_EMOJI)
+		await raidMsg.add_reaction(MAYBE_EMOJI)
+		await raidMsg.add_reaction(NOT_GOING_EMOJI)
 
-	async def userGoing(self, message, user):
-		# If the user isn't already in the going list, add them
-		if user not in raidDict[message.id][GOING]:
-			raidDict[message.id][GOING].append(user)
-		# If the user is in the not going list, remove them
-		if user in raidDict[message.id][NOT_GOING]:
-			raidDict[message.id][NOT_GOING].remove(user)
-		await self.updateMessage(message)
 
-	async def userNotGoing(self, message, user):
-		# If the user isn't already in the not going list, add them
-		if user not in raidDict[message.id][NOT_GOING]:
-			raidDict[message.id][NOT_GOING].append(user)
-		# If the user is in the going list, remove them
-		if user in raidDict[message.id][GOING]:
-			raidDict[message.id][GOING].remove(user)
+	async def updateList(self, message, user, statusKey):
+		optionList = [GOING, NOT_GOING, MAYBE_GOING]
+		# If the user isn't already in the given list, add them
+		if user not in raidDict[message.id][statusKey]:
+			raidDict[message.id][statusKey].append(user)
+		shortList = [op for op in optionList if op != statusKey]
+		for option in shortList:
+			if user in raidDict[message.id][option]:
+				raidDict[message.id][option].remove(user)
 		await self.updateMessage(message)
 
 	async def updateMessage(self, message):
@@ -82,6 +83,8 @@ class EventBot(commands.Cog):
 		raidDict[message.id][INIT].mention)
 		# Add the going list
 		updatedMessage += '\nGoing: ' + ', '.join(user.display_name for user in raidDict[message.id][GOING])
+		# Add the maybe going list
+		updatedMessage += '\nMaybe Going: ' + ', '.join(user.display_name for user in raidDict[message.id][MAYBE_GOING])
 		# Add the not going list
 		updatedMessage += '\nNot Going: ' + ', '.join(user.display_name for user in raidDict[message.id][NOT_GOING])
 		# Update the message
