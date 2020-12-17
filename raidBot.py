@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import time
+import re
 from datetime import datetime, timedelta, timezone
 from discord.ext import commands
 from dateutil.parser import parse
@@ -22,9 +23,9 @@ NOT_GOING_EMOJI = '❌'
 #TODO: Add a maybe option?
 
 def setup(bot):
-	bot.add_cog(EventBot(bot))
+	bot.add_cog(RaidBot(bot))
 
-class EventBot(commands.Cog):
+class RaidBot(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 
@@ -54,9 +55,9 @@ class EventBot(commands.Cog):
 	@commands.command(name='newRaid', aliases = ['n', 'newraid'], help = 'Command to make a new raid. Try !n Weedle Raid at the Fountain 3:00 pm')
 	async def newRaid(self, ctx, *input):
 		# Use parse to get the datetime object, where ever it is.
-		parsedInput = parse(" ".join(input), fuzzy_with_tokens = True)
+		parsedInput = parse(' '.join(input), fuzzy_with_tokens = True)
 		# Get the info and time
-		info = parsedInput[1][0]
+		info = re.sub(' +', ' ', " ".join(parsedInput[1]))
 		time = parsedInput[0]
 		# Send the very first message
 		raidMsg = await ctx.send('New raid: {} \nTime: {} \nInitiator: {}'.format(info, time.strftime('%m-%d-%y %H:%M'), ctx.author.mention))
