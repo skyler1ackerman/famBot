@@ -28,6 +28,13 @@ MAYBE_EMOJI = '🟨'
 NOT_GOING_EMOJI = '❌'
 #TODO: Add a maybe option?
 
+# Custom Errors
+class NotAnAdmin(commands.CheckFailure):
+	pass
+
+class RaidNotFound(commands.CheckFailure):
+	pass
+
 def setup(bot):
 	bot.add_cog(RaidBot(bot))
 
@@ -37,6 +44,17 @@ class RaidBot(commands.Cog):
 		self.bot = bot
 		# Start the loop that checks when raids are about to start
 		self.bot.loop.create_task(self.backgroundLoop())
+
+
+	# Custom Error Checking
+	def adminCheck():
+		async def adminError(ctx):
+			if not ctx.author.guild_permissions.administrator:
+				raise NotAnAdmin('You are not an admin!')
+			return True
+		return commands.check(adminError)
+
+	#----------------------------------
 
 	@commands.Cog.listener()
 	async def on_reaction_add(self, reaction, user):
@@ -60,7 +78,7 @@ class RaidBot(commands.Cog):
 				# Call the subroutine with the given emoji
 				await self.updateListRemove(reaction.message, user, optionDict[reaction.emoji])
 			
-	@commands.command(name='newRaid', aliases = ['n', 'newraid'], help = 'Command to make a new raid. Try typing "!n Weedle Raid at the Fountain 3:00 pm"')
+	@commands.command(name='newRaid', aliases = ['n', 'newraid', 'raid'], help = 'Command to make a new raid. Try typing "!n Weedle Raid at the Fountain 3:00 pm"')
 	async def newRaid(self, ctx, *input):
 		# Use parse to get the datetime object, where ever it is.
 		parsedInput = parse(' '.join(input), fuzzy_with_tokens = True)
@@ -70,18 +88,22 @@ class RaidBot(commands.Cog):
 		shortID = await self.createURID()
 		# Send the very first message
 		raidMsg = await ctx.send('Raid {}: {} \nTime: {} \nInitiator: {}'.format(shortID, info, time.strftime('%m-%d-%y %H:%M'), ctx.author.mention))
+		# Should I add this line? It stays behind when the raid is gone, which isn't great
+		# await ctx.send('_ _')
 		# Save the message with all of the extra info
 		raidDict[raidMsg.id] = {MESSAGE: raidMsg, SHORT_ID: shortID, TIME: time, INFO: info, \
 		INIT: ctx.author, GOING: [], MAYBE_GOING: [], NOT_GOING:[], CHANNEL: ctx.channel}
+		# Delete the command message
+		await ctx.message.delete()
 		# Start with thre reactions for going, maybe going, and not going
-		await ctx.send(raidDict[raidMsg.id][SHORT_ID])
 		await raidMsg.add_reaction(GOING_EMOJI)
 		await raidMsg.add_reaction(MAYBE_EMOJI)
 		await raidMsg.add_reaction(NOT_GOING_EMOJI)
 
-	@commands.command(name='p')
-	async def printID(self,ctx):
-		await ctx.send(await self.createURID())
+
+	@commands.command(name='c')
+	async def printCTXDIR(self,ctx):
+		await ctx.send(dir(ctx))
 
 	# This is called if a user removes their emoji from a message
 	async def updateListRemove(self, message, user, statusKey):
@@ -129,6 +151,36 @@ class RaidBot(commands.Cog):
 			if shortID not in raidDict:
 				return shortID
 
+	@commands.command(name='cancel', help='Cancel a raid by raid ID. Call with !cancel <RaidId>')
+	async def cancelRaid(self, ctx, ID):
+		raid = await self.getRaidByURID(ID)
+		updatedMessage = 'Cancelled Raid {}: {} \nTime: {} \nInitiator: {} \n CANCELLED' \
+		.format(raid[SHORT_ID],\
+		raid[INFO],\
+		raid[TIME].strftime('%m-%d-%y %H:%M'), \
+		raid[INIT].mention)
+		await raid[MESSAGE].edit(content=updatedMessage)
+
+	# A pretty basic function that finds a raid in the raidDict using it's URID
+	async def getRaidByURID(self, ID):
+		for raid in raidDict.values():
+			if raid[SHORT_ID] == ID:
+				return raid
+		raise RaidNotFound('We cannot find that raid!')
+
+	# Error handling for any function that looks for raids
+	@cancelRaid.error
+	async def testError(self, ctx, error):
+		if isinstance(error, RaidNotFound):
+			await ctx.send(error)
+
+	# Regular shut down of the bot
+	@commands.command(name='s')
+	@adminCheck()
+	async def shutdown(self, ctx):
+		await ctx.send('Shutting down Fam Bot')
+		await ctx.bot.logout()
+
 	# This is the loop that runs in the background.
 	# Right now it does two things, checks if a raid is 5 min away from starting, or if a raid is over.
 	async def backgroundLoop(self):
@@ -153,6 +205,8 @@ class RaidBot(commands.Cog):
 				raidDict.pop(delM)
 			# Sleep for a minute
 			await asyncio.sleep(60)
+
+	
 
 # {MID:
 # {TIME:<DATETIME>,

@@ -14,10 +14,4 @@ for exten in extensions:
 async def on_ready():
 	print("Fam Bot is online.")
 
-# Regular shut down of the bot
-@bot.command(name='s')
-async def shutdown(ctx):
-	await ctx.send('Shutting down Fam Bot')
-	await ctx.bot.logout()
-
 bot.run(TOKEN)
