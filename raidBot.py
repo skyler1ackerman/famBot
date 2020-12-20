@@ -1,16 +1,20 @@
 import discord
 import asyncio
+import shortuuid
 import time
 import re
 from datetime import datetime, timedelta, timezone
 from discord.ext import commands
 from dateutil.parser import parse
 
+shortuuid.set_alphabet('0123456789')
+
 raidDict = {}
 
 # Global Variables
 # Dict Keys
 MESSAGE = 'Message'
+SHORT_ID = 'Short Id'
 TIME = 'Time'
 INFO = 'Info'
 INIT = 'Init'
@@ -39,7 +43,7 @@ class RaidBot(commands.Cog):
 		# Three subroutines for if user is going, maybe going, or not going
 		optionDict = {GOING_EMOJI:GOING, MAYBE_EMOJI: MAYBE_GOING, NOT_GOING_EMOJI:NOT_GOING}
 		# If the message is by a bot, the reaction is not by a bot, and the message is a raid message
-		if reaction.message.author.bot and not user.bot and 'New raid:' in reaction.message.content:
+		if reaction.message.author.bot and not user.bot and reaction.message.content.startswith('Raid '):
 			if optionDict.get(reaction.emoji):
 				await self.updateList(reaction.message, user, optionDict[reaction.emoji])
 			else:
@@ -51,7 +55,7 @@ class RaidBot(commands.Cog):
 		# Three subroutines for if user renegs going, maybe going, or not going
 		optionDict = {GOING_EMOJI:GOING, MAYBE_EMOJI: MAYBE_GOING, NOT_GOING_EMOJI:NOT_GOING}
 		# If the message is by a bot, the reaction is not by a bot, and the message is a raid message
-		if reaction.message.author.bot and not user.bot and 'New raid:' in reaction.message.content:
+		if reaction.message.author.bot and not user.bot and reaction.message.content.startswith('Raid '):
 			if optionDict.get(reaction.emoji):
 				# Call the subroutine with the given emoji
 				await self.updateListRemove(reaction.message, user, optionDict[reaction.emoji])
@@ -63,14 +67,21 @@ class RaidBot(commands.Cog):
 		# Get the info and time
 		info = re.sub(' +', ' ', " ".join(parsedInput[1]))
 		time = parsedInput[0]
+		shortID = await self.createURID()
 		# Send the very first message
-		raidMsg = await ctx.send('New raid: {} \nTime: {} \nInitiator: {}'.format(info, time.strftime('%m-%d-%y %H:%M'), ctx.author.mention))
-		# Save the message ID, time, info, init, and make empty going and not going lists.
-		raidDict[raidMsg.id] = {MESSAGE: raidMsg, TIME: time, INFO: info, INIT: ctx.author, GOING: [], MAYBE_GOING: [], NOT_GOING:[], CHANNEL: ctx.channel}
+		raidMsg = await ctx.send('Raid {}: {} \nTime: {} \nInitiator: {}'.format(shortID, info, time.strftime('%m-%d-%y %H:%M'), ctx.author.mention))
+		# Save the message with all of the extra info
+		raidDict[raidMsg.id] = {MESSAGE: raidMsg, SHORT_ID: shortID, TIME: time, INFO: info, \
+		INIT: ctx.author, GOING: [], MAYBE_GOING: [], NOT_GOING:[], CHANNEL: ctx.channel}
 		# Start with thre reactions for going, maybe going, and not going
+		await ctx.send(raidDict[raidMsg.id][SHORT_ID])
 		await raidMsg.add_reaction(GOING_EMOJI)
 		await raidMsg.add_reaction(MAYBE_EMOJI)
-		await raidMsg.add_reaction(NOT_GOING_EMOJI)		
+		await raidMsg.add_reaction(NOT_GOING_EMOJI)
+
+	@commands.command(name='p')
+	async def printID(self,ctx):
+		await ctx.send(await self.createURID())
 
 	# This is called if a user removes their emoji from a message
 	async def updateListRemove(self, message, user, statusKey):
@@ -86,6 +97,7 @@ class RaidBot(commands.Cog):
 		if user not in raidDict[message.id][statusKey]:
 			raidDict[message.id][statusKey].append(user)
 		shortList = [op for op in optionList if op != statusKey]
+		# If the user had already selected one of the other options, remove them
 		for option in shortList:
 			if user in raidDict[message.id][option]:
 				raidDict[message.id][option].remove(user)
@@ -94,8 +106,9 @@ class RaidBot(commands.Cog):
 	# This is called after the list is updated so we can also update the message
 	async def updateMessage(self, message):
 		# Start with the basic message with info, time, and init
-		updatedMessage = 'New raid: {} \nTime: {} \nInitiator: {}' \
-		.format(raidDict[message.id][INFO],\
+		updatedMessage = 'Raid {}: {} \nTime: {} \nInitiator: {}' \
+		.format(raidDict[message.id][SHORT_ID],\
+		raidDict[message.id][INFO],\
 		raidDict[message.id][TIME].strftime('%m-%d-%y %H:%M'), \
 		raidDict[message.id][INIT].mention)
 		# Add the going list
@@ -106,6 +119,15 @@ class RaidBot(commands.Cog):
 		updatedMessage += '\nNot Going: ' + ', '.join(user.display_name for user in raidDict[message.id][NOT_GOING])
 		# Update the message
 		await message.edit(content=updatedMessage)
+
+	# Used to create unique ID for each raid
+	async def createURID(self):
+		# The odds of a raid being a duplicate is pretty low but we have this loop just in case
+		while True:
+			# Six digits seemed good
+			shortID = shortuuid.uuid()[0:6]
+			if shortID not in raidDict:
+				return shortID
 
 	# This is the loop that runs in the background.
 	# Right now it does two things, checks if a raid is 5 min away from starting, or if a raid is over.
