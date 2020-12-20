@@ -21,6 +21,7 @@ INIT = 'Init'
 GOING = 'Going'
 NOT_GOING = 'Not_Going'
 MAYBE_GOING = 'Maybe Going'
+CANCELLED = 'Cancelled'
 CHANNEL = 'Channel'
 # Emojis
 GOING_EMOJI = '✅'
@@ -92,7 +93,7 @@ class RaidBot(commands.Cog):
 		# await ctx.send('_ _')
 		# Save the message with all of the extra info
 		raidDict[raidMsg.id] = {MESSAGE: raidMsg, SHORT_ID: shortID, TIME: time, INFO: info, \
-		INIT: ctx.author, GOING: [], MAYBE_GOING: [], NOT_GOING:[], CHANNEL: ctx.channel}
+		INIT: ctx.author, GOING: [], MAYBE_GOING: [], NOT_GOING:[], CHANNEL: ctx.channel, CANCELLED: False}
 		# Delete the command message
 		await ctx.message.delete()
 		# Start with thre reactions for going, maybe going, and not going
@@ -127,8 +128,15 @@ class RaidBot(commands.Cog):
 
 	# This is called after the list is updated so we can also update the message
 	async def updateMessage(self, message):
+		print('Updating Message')
+		print(raidDict[message.id][CANCELLED])
+		# Create the base message with all of the formatting arranged.
+		baseMsg = 'Raid {}: {} \nTime: {} \nInitiator: {}'
+		# Mark as cancelled if the raid is cancelled
+		if raidDict[message.id][CANCELLED]:
+			baseMsg = 'Cancelled ' + baseMsg
 		# Start with the basic message with info, time, and init
-		updatedMessage = 'Raid {}: {} \nTime: {} \nInitiator: {}' \
+		updatedMessage =  baseMsg \
 		.format(raidDict[message.id][SHORT_ID],\
 		raidDict[message.id][INFO],\
 		raidDict[message.id][TIME].strftime('%m-%d-%y %H:%M'), \
@@ -140,6 +148,9 @@ class RaidBot(commands.Cog):
 		# Add the not going list
 		updatedMessage += '\nNot Going: ' + ', '.join(user.display_name for user in raidDict[message.id][NOT_GOING])
 		# Update the message
+		if raidDict[message.id][CANCELLED]:
+			await message.clear_reactions()
+			updatedMessage += '\n -- CANCELLED -- '
 		await message.edit(content=updatedMessage)
 
 	# Used to create unique ID for each raid
@@ -154,12 +165,9 @@ class RaidBot(commands.Cog):
 	@commands.command(name='cancel', help='Cancel a raid by raid ID. Call with !cancel <RaidId>')
 	async def cancelRaid(self, ctx, ID):
 		raid = await self.getRaidByURID(ID)
-		updatedMessage = 'Cancelled Raid {}: {} \nTime: {} \nInitiator: {} \n CANCELLED' \
-		.format(raid[SHORT_ID],\
-		raid[INFO],\
-		raid[TIME].strftime('%m-%d-%y %H:%M'), \
-		raid[INIT].mention)
-		await raid[MESSAGE].edit(content=updatedMessage)
+		raid[CANCELLED] = True
+		await ctx.message.delete()
+		await self.updateMessage(raid[MESSAGE])
 
 	# A pretty basic function that finds a raid in the raidDict using it's URID
 	async def getRaidByURID(self, ID):
