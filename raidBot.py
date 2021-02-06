@@ -29,10 +29,6 @@ MAYBE_EMOJI = '🟨'
 NOT_GOING_EMOJI = '❌'
 #TODO: Add a maybe option?
 
-# Custom Errors
-class NotAnAdmin(commands.CheckFailure):
-	pass
-
 class RaidNotFound(commands.CheckFailure):
 	pass
 
@@ -45,15 +41,6 @@ class RaidBot(commands.Cog):
 		self.bot = bot
 		# Start the loop that checks when raids are about to start
 		self.bot.loop.create_task(self.backgroundLoop())
-
-
-	# Custom Error Checking
-	def adminCheck():
-		async def adminError(ctx):
-			if not ctx.author.guild_permissions.administrator:
-				raise NotAnAdmin('You are not an admin!')
-			return True
-		return commands.check(adminError)
 
 	#----------------------------------
 
@@ -181,13 +168,6 @@ class RaidBot(commands.Cog):
 	async def testError(self, ctx, error):
 		if isinstance(error, RaidNotFound):
 			await ctx.send(error)
-
-	# Regular shut down of the bot
-	@commands.command(name='s')
-	@adminCheck()
-	async def shutdown(self, ctx):
-		await ctx.send('Shutting down Fam Bot')
-		await ctx.bot.logout()
 
 	# This is the loop that runs in the background.
 	# Right now it does two things, checks if a raid is 5 min away from starting, or if a raid is over.
