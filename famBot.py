@@ -6,7 +6,7 @@ from discord.ext import commands
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-extensions = ['raidBot', 'utilBot']
+extensions = ['raidBot', 'utilBot', 'leagueBot']
 for exten in extensions:
 	bot.load_extension(exten)
 
