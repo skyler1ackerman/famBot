@@ -4,7 +4,7 @@ import shortuuid
 import time
 import re
 from datetime import datetime, timedelta, timezone
-from discord.ext import commands
+from discord.ext import commands, tasks
 from dateutil.parser import parse
 
 shortuuid.set_alphabet('0123456789')
@@ -40,7 +40,8 @@ class RaidBot(commands.Cog):
 		# Init the bot
 		self.bot = bot
 		# Start the loop that checks when raids are about to start
-		self.bot.loop.create_task(self.backgroundLoop())
+		# self.bot.loop.create_task(self.backgroundLoop())
+		self.backLoop.start()
 
 	#----------------------------------
 
@@ -169,32 +170,25 @@ class RaidBot(commands.Cog):
 		if isinstance(error, RaidNotFound):
 			await ctx.send(error)
 
-	# This is the loop that runs in the background.
-	# Right now it does two things, checks if a raid is 5 min away from starting, or if a raid is over.
-	async def backgroundLoop(self):
-		# Loop infinitely
-		while True:
-			# This is the list of messages to delete each iteration
-			# We reset it ever loop
-			delList = []
-			# Loop through all of the current raid messages
-			for raid in raidDict.values():
-				# If the raid is between 5 and 6 minutes away, ping everyone who is going that it's starting soon
-				if raid[TIME]-timedelta(minutes=6) <= datetime.now() <= raid[TIME]-timedelta(minutes=5) and raid[GOING]:
-					await raid[CHANNEL].send(', '.join(u.mention for u in raid[GOING]) + ', ' + raid[INFO] + ' is starting in five minutes!')
-				# If the raid has passed, prep it for deletion
-				if raid[TIME] <= datetime.now():
-					delList.append(raid[MESSAGE].id)
-			# If the raid has been prepped for deletion
-			for delM in delList:
-				# Delete the message
-				await raidDict[delM][MESSAGE].delete()
-				# Delete the raid from the dictionary
-				raidDict.pop(delM)
-			# Sleep for a minute
-			await asyncio.sleep(60)
-
-	
+	# TODO: Split delete and ping into two seperate functions?
+	@tasks.loop(minutes=1)
+	async def backLoop(self):
+		await self.bot.wait_until_ready()
+		delList = []
+		# Loop through all of the current raid messages
+		for raid in raidDict.values():
+			# If the raid is between 5 and 6 minutes away, ping everyone who is going that it's starting soon
+			if raid[TIME]-timedelta(minutes=6) <= datetime.now() <= raid[TIME]-timedelta(minutes=5) and raid[GOING]:
+				await raid[CHANNEL].send(', '.join(u.mention for u in raid[GOING]) + ', ' + raid[INFO] + ' is starting in five minutes!')
+			# If the raid has passed, prep it for deletion
+			if raid[TIME] <= datetime.now():
+				delList.append(raid[MESSAGE].id)
+		# If the raid has been prepped for deletion
+		for delM in delList:
+			# Delete the message
+			await raidDict[delM][MESSAGE].delete()
+			# Delete the raid from the dictionary
+			raidDict.pop(delM)
 
 # {MID:
 # {TIME:<DATETIME>,
