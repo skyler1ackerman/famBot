@@ -23,6 +23,7 @@ class UtilBot(commands.Cog):
 			return True
 		return commands.check(adminError)
 
+	# I edited this code!
 	@commands.command(name='repeat', aliases=['r'])
 	async def repeat(self, ctx, rString, num):
 		for x in range(int(num)):
