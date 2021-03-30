@@ -1,8 +1,11 @@
-import discord, json, asyncio, datetime
+import discord, json, asyncio, datetime, ffmpeg, youtube_dl
 import unicodedata
 from random import choice
+from emoji import demojize
 from discord.ext import commands
 from nltk import tokenize
+
+me = discord.Client()
 
 # Custom Errors
 class NotAnAdmin(commands.CheckFailure):
@@ -27,13 +30,10 @@ class UtilBot(commands.Cog):
 			return True
 		return commands.check(adminError)
 
-	def meCheck():
-		async def meErr(ctx):
-			if ctx.author.name != 'thomasm16' or ctx.author.discriminator != '5700':
-				await ctx.send('Sorry, that\'s for thomasm16 only')
-				raise NotOwner('You are not the owner!')
-			return True
-		return commands.check(meErr)
+	# TODO: Edit so it sends a message in the channel?
+	async def meCheck(ctx):
+		appInfo = await ctx.bot.application_info()
+		return ctx.author.id == appInfo.owner.id
 
 	# I edited this code!
 	@commands.command(name='repeat', aliases=['r'])
@@ -69,7 +69,7 @@ class UtilBot(commands.Cog):
 
 	@commands.command(name='owner')
 	async def owner(self, ctx):
-		await ctx.send('{} owns this server.'.format(ctx.guild.owner.nick))
+		await ctx.send('{} owns this server.'.format(ctx.guild.owner.name))
 
 	@commands.command(name='loveme')
 	async def loveme(self, ctx):
@@ -77,7 +77,7 @@ class UtilBot(commands.Cog):
 		await ctx.send(choice(loveList).format(ctx.author.mention))
 
 	@commands.command(name='imageTester', aliases=['it'])
-	@meCheck()
+	@commands.check(meCheck)
 	async def imageTester(self, ctx):
 		image_types = ["png", "jpeg", "gif", "jpg"]
 		for attach in ctx.message.attachments:
@@ -90,34 +90,55 @@ class UtilBot(commands.Cog):
 
 	# TODO: Fix this
 	@commands.command(name='hist')
-	@meCheck()
+	@commands.check(meCheck)
 	async def history(self, ctx):
-		allHist = await ctx.channel.history(limit=None).map(self.transform).flatten()
-		with open(filename:='./data/' + ctx.channel.name + '_log.txt', 'w') as f:
-			for m in [elm for elm in reversed(allHist)]:
-				try:
-					f.write('%s\n' % m)
-				except:
-					f.write('ERROR\n')
-		await ctx.send(file=discord.File(filename))
+		async with ctx.typing():
+			allHist = await ctx.channel.history(limit=None).map(self.transform).flatten()
+			with open(filename:='./data/' + ctx.channel.name + '_log.txt', 'w') as f:
+				for m in [elm for elm in reversed(allHist)]:
+					try:
+						f.write('%s\n' % demojize(m))
+					except:
+						f.write('ERROR\n')
+			await ctx.send(file=discord.File(filename))
 
+	@commands.command(name='status', aliases=['stat'])
+	async def changeStatus(self, ctx, status):
+		game = discord.Game(status)
+		await self.bot.change_presence(status=discord.Status.idle, activity=game)
 
 	@commands.command(name='ree')
 	async def reactSpeller(self, ctx, eString):
 		# TODO: Check for duplicates
-		hist = await ctx.channel.history(limit=2).flatten()
+		message = await ctx.fetch_message(ctx.message.reference.message_id)
 		await ctx.message.delete()
 		for c in eString.lower():
-			await hist[1].add_reaction(chr(ord(c)+127365))
+			await message.add_reaction(chr(ord(c)+127365))
+
+	@commands.command(name='conv')
+	async def emojiConvertor(self, ctx, emj:discord.Emoji):
+		await ctx.send(emj)
+		# myConv = commands.EmojiConverter
+		# myEmj = myConv.convert(ctx, ':red_car:')
 
 	@commands.command(name='info')
 	async def info(self, ctx):
 		await ctx.send('This is {}, owned by {}.\n It has {} voice channels, {} text channels, and premium tier {}.'\
-			.format(ctx.guild.name, ctx.guild.owner.nick, len(ctx.guild.voice_channels), len(ctx.guild.text_channels), ctx.guild.premium_tier))
+			.format(ctx.guild.name, ctx.guild.owner.name, len(ctx.guild.voice_channels), len(ctx.guild.text_channels), ctx.guild.premium_tier))
+
+	@commands.command(name='connect')
+	async def connectToChannel(self, ctx, url):
+		channel = ctx.author.voice.channel
+		# myFile = discord.FFmpegPCMAudio(executable="C:/FFmpeg/bin/ffmpeg.exe", source='data/mp3/simp.mp3')
+		vc = await channel.connect()
+		vc1 = ctx.guild.voice_client
+		player = await vc1.create_ytdl_player(url)
+		player.start()
+		# vc.play(myFile)
 
 
 	# Regular shut down of the bot
-	@commands.command(name='s')
+	@commands.command(name='s')	
 	@adminCheck()
 	async def shutdown(self, ctx):
 		await ctx.send('Shutting down Fam Bot')

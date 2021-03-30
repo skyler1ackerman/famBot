@@ -1,0 +1,2547 @@
+{
+  "totalResults": 350,
+  "page": 1,
+  "total_pages": 4,
+  "more_pages": true,
+  "data": [
+    {
+      "restaurant_name": "Draft Republic",
+      "restaurant_phone": "(858) 450-1400",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32869930117214980,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4282 Esplanade Ct",
+        "formatted": "4282 Esplanade Ct San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.86993,
+        "lon": -117.21498
+      },
+      "menus": [],
+      "last_updated": "2020-12-28T18:08:07.498Z"
+    },
+    {
+      "restaurant_name": "Marine Room",
+      "restaurant_phone": "(858) 459-7222",
+      "restaurant_website": "http://www.marineroom.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32851980117260584,
+      "cuisines": [
+        "French"
+      ],
+      "address": {
+        "city": "LA JOLLA",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2000 Spindrift Dr",
+        "formatted": "2000 Spindrift Dr LA JOLLA, CA 92037"
+      },
+      "geo": {
+        "lat": 32.85198,
+        "lon": -117.260582
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.435Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 459-2300",
+      "restaurant_website": "https://restaurants.subway.com/united-states/ca/la-jolla/2206-torrey-pines-road?utm_source=yext-other&utm_medium=local&utm_term=acq&utm_content=34890&utm_campaign=evergreen-2020&y_source=1_MTQ4OTYzNDk",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32851000117253900,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2206 Torrey Pines Road",
+        "formatted": "2206 Torrey Pines Road La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.851,
+        "lon": -117.2539
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.528Z"
+    },
+    {
+      "restaurant_name": "Daphne's - La Jolla",
+      "restaurant_phone": "(858) 623-6940",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32866791117231300,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8657 Villa La Jolla Dr Ste 105",
+        "formatted": "8657 Villa La Jolla Dr Ste 105 La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.866791,
+        "lon": -117.2313
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.537Z"
+    },
+    {
+      "restaurant_name": "Cheese Shop",
+      "restaurant_phone": "(858) 459-3921",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32853790117256110,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2165 Avenida de La Playa",
+        "formatted": "2165 Avenida de La Playa La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.85379,
+        "lon": -117.25611
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.681Z"
+    },
+    {
+      "restaurant_name": "Jeff's Burgers",
+      "restaurant_phone": "(858) 454-8038",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32854220117256630,
+      "cuisines": [
+        "Burgers"
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2152 Avenida De La Playa",
+        "formatted": "2152 Avenida De La Playa La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.85422,
+        "lon": -117.25663
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.231Z"
+    },
+    {
+      "restaurant_name": "Piatti Ristorante",
+      "restaurant_phone": "(858) 454-1589",
+      "restaurant_website": "http://www.piatti.com",
+      "hours": "",
+      "price_range": "$$$",
+      "price_range_num": 3,
+      "restaurant_id": 32853877117256056,
+      "cuisines": [
+        "Italian"
+      ],
+      "address": {
+        "city": "LA JOLLA",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2182 Avenida De La Playa",
+        "formatted": "2182 Avenida De La Playa LA JOLLA, CA 92037"
+      },
+      "geo": {
+        "lat": 32.853877,
+        "lon": -117.256056
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.237Z"
+    },
+    {
+      "restaurant_name": "Osteria Romantica",
+      "restaurant_phone": "(858) 551-1221",
+      "restaurant_website": "http://www.osteriaromantica.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32853714117256440,
+      "cuisines": [
+        "Italian"
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2151 Avenida De La Playa",
+        "formatted": "2151 Avenida De La Playa La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.853714,
+        "lon": -117.256439
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.254Z"
+    },
+    {
+      "restaurant_name": "Domino's Pizza",
+      "restaurant_phone": "(858) 452-8273",
+      "restaurant_website": "http://www.dominos.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32870200117233000,
+      "cuisines": [
+        "American",
+        "Pizza",
+        "Wings"
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "3211 Holiday Ct",
+        "formatted": "3211 Holiday Ct La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.8702,
+        "lon": -117.233
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.305Z"
+    },
+    {
+      "restaurant_name": "Elijah's",
+      "restaurant_phone": "(858) 455-1461",
+      "restaurant_website": "http://www.elijahsrestaurant.com",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32869355117233736,
+      "cuisines": [
+        "American",
+        "Bakery & Pastries",
+        "Breakfast",
+        "Burgers",
+        "Desserts",
+        "Sandwiches"
+      ],
+      "address": {
+        "city": "LA JOLLA",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8861 Villa La Jolla Dr",
+        "formatted": "8861 Villa La Jolla Dr LA JOLLA, CA 92037"
+      },
+      "geo": {
+        "lat": 32.869355,
+        "lon": -117.233737
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.374Z"
+    },
+    {
+      "restaurant_name": "BJ's Restaurant & Brewhouse",
+      "restaurant_phone": "(858) 455-0662",
+      "restaurant_website": "http://www.bjsrestaurants.com/locations/ca/la-jolla",
+      "hours": "",
+      "price_range": "$$$",
+      "price_range_num": 3,
+      "restaurant_id": 32867935117233116,
+      "cuisines": [
+        "American",
+        "Pizza",
+        "Salads",
+        "Sandwiches",
+        "Wings"
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8785 Villa La Jolla Dr",
+        "formatted": "8785 Villa La Jolla Dr La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.867935,
+        "lon": -117.233116
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.417Z"
+    },
+    {
+      "restaurant_name": "Cusp Dining & Drinks",
+      "restaurant_phone": "(858) 551-3620",
+      "restaurant_website": "http://www.cusprestaurant.com/",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32851099117254244,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "7955 La Jolla Shores Drive",
+        "formatted": "7955 La Jolla Shores Drive La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.851099,
+        "lon": -117.254245
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.448Z"
+    },
+    {
+      "restaurant_name": "Delsushi",
+      "restaurant_phone": "(858) 202-1333",
+      "restaurant_website": "http://www.delsushi.com",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32869976117232750,
+      "cuisines": [
+        "Asian",
+        "Japanese",
+        "Sushi"
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "3251 Holiday Ct Ste 206",
+        "formatted": "3251 Holiday Ct Ste 206 La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.869976,
+        "lon": -117.23275
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.547Z"
+    },
+    {
+      "restaurant_name": "Yummy Maki Yummy Box",
+      "restaurant_phone": "(858) 587-9848",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32870027117233116,
+      "cuisines": [
+        "Japanese"
+      ],
+      "address": {
+        "city": "LA JOLLA",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "3211 Holiday Ct",
+        "formatted": "3211 Holiday Ct LA JOLLA, CA 92037"
+      },
+      "geo": {
+        "lat": 32.870027,
+        "lon": -117.233116
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.646Z"
+    },
+    {
+      "restaurant_name": "Islands Fine Burgers & Drinks - La Jolla",
+      "restaurant_phone": "(858) 455-9945",
+      "restaurant_website": "http://www.islandsrestaurants.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32867565117231550,
+      "cuisines": [
+        "American",
+        "Burgers"
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "3351 Nobel Dr",
+        "formatted": "3351 Nobel Dr La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.867565,
+        "lon": -117.231552
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.651Z"
+    },
+    {
+      "restaurant_name": "Pick Up Stix",
+      "restaurant_phone": "(858) 552-1566",
+      "restaurant_website": "http://www.pickupstix.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32866818117233220,
+      "cuisines": [
+        "Asian",
+        "Chinese",
+        "Japanese"
+      ],
+      "address": {
+        "city": "LA JOLLA",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8707 Villa La Jolla Dr",
+        "formatted": "8707 Villa La Jolla Dr LA JOLLA, CA 92037"
+      },
+      "geo": {
+        "lat": 32.866818,
+        "lon": -117.23322
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.670Z"
+    },
+    {
+      "restaurant_name": "Rubio's Coastal Grill - La Jolla",
+      "restaurant_phone": "(858) 546-9377",
+      "restaurant_website": "http://www.rubios.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32869396117231830,
+      "cuisines": [
+        "American",
+        "Mexican",
+        "Seafood"
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8855 Villa La Jolla Dr Ste 404-06",
+        "formatted": "8855 Villa La Jolla Dr Ste 404-06 La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.869396,
+        "lon": -117.231834
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.772Z"
+    },
+    {
+      "restaurant_name": "Seasons 52",
+      "restaurant_phone": "(858) 450-1252",
+      "restaurant_website": "http://www.seasons52.com/locations/default.aspx?RestaurantID=4529",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32872396117209280,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4505 La Jolla Village Drive",
+        "formatted": "4505 La Jolla Village Drive San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.872396,
+        "lon": -117.209282
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:24:53.520Z"
+    },
+    {
+      "restaurant_name": "Shore Rider",
+      "restaurant_phone": "(858) 412-5294",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32853921117256308,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2168 Avenida De La Playa",
+        "formatted": "2168 Avenida De La Playa La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.853921,
+        "lon": -117.256308
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.384Z"
+    },
+    {
+      "restaurant_name": "Robeks",
+      "restaurant_phone": "(858) 458-5132",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32869946117215468,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8750 Genesee Avenue, 254",
+        "formatted": "8750 Genesee Avenue, 254 La Jolla, CA 92122"
+      },
+      "geo": {
+        "lat": 32.869946,
+        "lon": -117.215469
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.621Z"
+    },
+    {
+      "restaurant_name": "Shore Thing",
+      "restaurant_phone": "(858) 456-7576",
+      "restaurant_website": "http://www.shorethingcafe.com/menu.php",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32853603117254250,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8080 La Jolla Shores Dr",
+        "formatted": "8080 La Jolla Shores Dr La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.853603,
+        "lon": -117.254247
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.703Z"
+    },
+    {
+      "restaurant_name": "Yogurt Escape",
+      "restaurant_phone": "(858) 456-2000",
+      "restaurant_website": "http://www.yogurtescape.com/",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32854175117256890,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2134 Avenida De La Playa",
+        "formatted": "2134 Avenida De La Playa La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.854175,
+        "lon": -117.256889
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.750Z"
+    },
+    {
+      "restaurant_name": "El Charro",
+      "restaurant_phone": "(858) 459-7900",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32853887117256130,
+      "cuisines": [
+        "Mexican"
+      ],
+      "address": {
+        "city": "LA JOLLA",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2175 Avenida De La Playa",
+        "formatted": "2175 Avenida De La Playa LA JOLLA, CA 92037"
+      },
+      "geo": {
+        "lat": 32.853887,
+        "lon": -117.256128
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:54.852Z"
+    },
+    {
+      "restaurant_name": "Rock Bottom Restaurant & Brewery",
+      "restaurant_phone": "(858) 450-9277",
+      "restaurant_website": "https://rockbottom.com/locations/la-jolla/?utm_source=local&utm_medium=listings&utm_campaign=imm",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32871227117234176,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8980 La Jolla Village Dr",
+        "formatted": "8980 La Jolla Village Dr La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.871227,
+        "lon": -117.234177
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.286Z"
+    },
+    {
+      "restaurant_name": "California Pizza Kitchen - La Jolla",
+      "restaurant_phone": "(858) 457-4222",
+      "restaurant_website": "http://cpk.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32867695117231004,
+      "cuisines": [
+        "American",
+        "Californian",
+        "Pasta",
+        "Pizza",
+        "Salads",
+        "Sandwiches",
+        "Soups"
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "3363 Nobel Dr",
+        "formatted": "3363 Nobel Dr La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.867695,
+        "lon": -117.231003
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.482Z"
+    },
+    {
+      "restaurant_name": "On A Roll Cafe ",
+      "restaurant_phone": "(858) 657-9200",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32891322117201070,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "9191 Towne Centre Dr",
+        "formatted": "9191 Towne Centre Dr La Jolla, CA 92122"
+      },
+      "geo": {
+        "lat": 32.891322,
+        "lon": -117.201071
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.595Z"
+    },
+    {
+      "restaurant_name": "The Flame Broiler",
+      "restaurant_phone": "(858) 587-8989",
+      "restaurant_website": "http://www.flamebroilerusa.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32869499117233756,
+      "cuisines": [
+        "American",
+        "Asian",
+        "Barbecue",
+        "Healthy",
+        "Korean"
+      ],
+      "address": {
+        "city": "LA JOLLA",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8867 Villa La Jolla Dr",
+        "formatted": "8867 Villa La Jolla Dr LA JOLLA, CA 92037"
+      },
+      "geo": {
+        "lat": 32.869499,
+        "lon": -117.233755
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.609Z"
+    },
+    {
+      "restaurant_name": "Eddy M's Cafe - La Jolla",
+      "restaurant_phone": "(858) 216-4600",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32874512117214972,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "La Jolla",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "4250 Executive Sq Ste 125",
+        "formatted": "4250 Executive Sq Ste 125 La Jolla, CA 92037"
+      },
+      "geo": {
+        "lat": 32.874512,
+        "lon": -117.214973
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.623Z"
+    },
+    {
+      "restaurant_name": "Z Pizza",
+      "restaurant_phone": "(858) 450-0660",
+      "restaurant_website": "http://www.zpizza.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32866151117233340,
+      "cuisines": [
+        "American",
+        "Pizza"
+      ],
+      "address": {
+        "city": "LA JOLLA",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "8657 Villa La Jolla Dr",
+        "formatted": "8657 Villa La Jolla Dr LA JOLLA, CA 92037"
+      },
+      "geo": {
+        "lat": 32.866151,
+        "lon": -117.233341
+      },
+      "menus": [],
+      "last_updated": "2020-12-29T06:53:55.761Z"
+    },
+    {
+      "restaurant_name": "Star Anise Thai Cuisine",
+      "restaurant_phone": "(800) 510-3663",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32868080117207090,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "University City",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8935 Towne Center Drive, 115",
+        "formatted": "8935 Towne Center Drive, 115 University City, CA 92122"
+      },
+      "geo": {
+        "lat": 32.86808,
+        "lon": -117.207089
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:28:06.937Z"
+    },
+    {
+      "restaurant_name": "Cocotte Bistro",
+      "restaurant_phone": "(800) 510-3663",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32867847117206212,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "University City",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8935 Towne Center Drive, 110",
+        "formatted": "8935 Towne Center Drive, 110 University City, CA 92122"
+      },
+      "geo": {
+        "lat": 32.867847,
+        "lon": -117.206213
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:28:07.155Z"
+    },
+    {
+      "restaurant_name": "Cafe Cravings 101",
+      "restaurant_phone": "(858) 427-3777",
+      "restaurant_website": "http:///ca/san-diego/998241-cafe-cravings-101/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32840401117126564,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92123",
+        "street": "9350 Waxie Way",
+        "formatted": "9350 Waxie Way San Diego, CA 92123"
+      },
+      "geo": {
+        "lat": 32.840401,
+        "lon": -117.126564
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:02.838Z"
+    },
+    {
+      "restaurant_name": "Denny's - Miramar",
+      "restaurant_phone": "(858) 578-6987",
+      "restaurant_website": "http://locations.dennys.com/CA/SAN-DIEGO/247856?utm_source=yext&utm_medium=local-listing&utm_campaign=yext-listing",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32878700117167330,
+      "cuisines": [
+        "American",
+        "Diner"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "6908 Miramar Rd",
+        "formatted": "6908 Miramar Rd San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.8787,
+        "lon": -117.167328
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:03.340Z"
+    },
+    {
+      "restaurant_name": "Denny's - Clairemont Mesa",
+      "restaurant_phone": "(858) 270-5059",
+      "restaurant_website": "http://locations.dennys.com/CA/SAN-DIEGO/247780?utm_source=yext&utm_medium=local-listing&utm_campaign=yext-listing",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32832611117201616,
+      "cuisines": [
+        "American",
+        "Diner"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4280 Clairemont Mesa Blvd",
+        "formatted": "4280 Clairemont Mesa Blvd San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.832611,
+        "lon": -117.201614
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:03.351Z"
+    },
+    {
+      "restaurant_name": "Karl Strauss Brewing Company",
+      "restaurant_phone": "(858) 587-2739",
+      "restaurant_website": "http:///ca/san-diego/844913-karl-strauss-brewing-company/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32896528117201750,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "9675 Scranton Rd",
+        "formatted": "9675 Scranton Rd San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.896528,
+        "lon": -117.201752
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:03.846Z"
+    },
+    {
+      "restaurant_name": "Barrio Donas",
+      "restaurant_phone": "(858) 732-0010",
+      "restaurant_website": "http:///ca/san-diego/844801-barrio-donas/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32835426117189070,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4714 Clairemont Mesa Blvd",
+        "formatted": "4714 Clairemont Mesa Blvd San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.835426,
+        "lon": -117.189072
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:03.897Z"
+    },
+    {
+      "restaurant_name": "Applebee?s\u00ae Grill & Bar",
+      "restaurant_phone": "(858) 569-4590",
+      "restaurant_website": "http://www.applebees.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32821335117158784,
+      "cuisines": [
+        "American",
+        "Burgers",
+        "Salads",
+        "Sandwiches"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7677 Balboa Ave",
+        "formatted": "7677 Balboa Ave San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.821335,
+        "lon": -117.158783
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:03.990Z"
+    },
+    {
+      "restaurant_name": "Islands Fine Burgers and Drinks - Clairemont",
+      "restaurant_phone": "(858) 569-8866",
+      "restaurant_website": "http://www.islandsrestaurants.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32821213117160090,
+      "cuisines": [
+        "American",
+        "Burgers"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7637 Balboa Ave",
+        "formatted": "7637 Balboa Ave San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.821213,
+        "lon": -117.160088
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:04.049Z"
+    },
+    {
+      "restaurant_name": "Mama's Cajun Kitchen",
+      "restaurant_phone": "(619) 786-5667",
+      "restaurant_website": "http:///ca/san-diego/843172-la-jolla-guest-house/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32848629117246184,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "7714 Esterel Dr",
+        "formatted": "7714 Esterel Dr San Diego, CA 92037"
+      },
+      "geo": {
+        "lat": 32.848629,
+        "lon": -117.246185
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:04.158Z"
+    },
+    {
+      "restaurant_name": "Jersey Mike's",
+      "restaurant_phone": "(858) 527-7140",
+      "restaurant_website": "http:///ca/san-diego/842026-jersey-mikes/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32878693117168060,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "6906 Miramar Rd",
+        "formatted": "6906 Miramar Rd San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.878693,
+        "lon": -117.16806
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:04.176Z"
+    },
+    {
+      "restaurant_name": "Peet's Coffee",
+      "restaurant_phone": "(619) 317-0034",
+      "restaurant_website": "http:///ca/san-diego/781072-peets-coffee/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32867451117206780,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8905 Towne Centre Drive",
+        "formatted": "8905 Towne Centre Drive San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.867451,
+        "lon": -117.20678
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:29.520Z"
+    },
+    {
+      "restaurant_name": "Taste of the Himalayas",
+      "restaurant_phone": "(858) 886-7990",
+      "restaurant_website": "http:///ca/san-diego/777988-taste-of-the-himalayas/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32867039117206772,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8895 Towne Centre Dr",
+        "formatted": "8895 Towne Centre Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.867039,
+        "lon": -117.206772
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:29.950Z"
+    },
+    {
+      "restaurant_name": "Los Primos Mexican Food",
+      "restaurant_phone": "(858) 638-0003",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32861774117222916,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "7770 Regents Road, 109",
+        "formatted": "7770 Regents Road, 109 San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.861774,
+        "lon": -117.222916
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:03.443Z"
+    },
+    {
+      "restaurant_name": "San Diego Catering Company",
+      "restaurant_phone": "(800) 510-3663",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32835499117165588,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "6984 Convoy Ct.",
+        "formatted": "6984 Convoy Ct. San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.835499,
+        "lon": -117.165588
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:03.740Z"
+    },
+    {
+      "restaurant_name": "Sushi Mori",
+      "restaurant_phone": "(800) 510-3663",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32853680117256296,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2161 Avenida De La Playa",
+        "formatted": "2161 Avenida De La Playa San Diego, CA 92037"
+      },
+      "geo": {
+        "lat": 32.85368,
+        "lon": -117.256294
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:03.842Z"
+    },
+    {
+      "restaurant_name": "Shallot Asian Cuisine",
+      "restaurant_phone": "(619) 821-8182",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32890871117201570,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "9254 Scranton Rd",
+        "formatted": "9254 Scranton Rd San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.890871,
+        "lon": -117.201567
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:04.043Z"
+    },
+    {
+      "restaurant_name": "Rose Canyon Deli",
+      "restaurant_phone": "(858) 270-7600",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32827152117230180,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4901 Morena Blvd Ste 301",
+        "formatted": "4901 Morena Blvd Ste 301 San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.827152,
+        "lon": -117.230179
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:04.568Z"
+    },
+    {
+      "restaurant_name": "Amardeen Cafe",
+      "restaurant_phone": "(858) 404-1395",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$$",
+      "price_range_num": 3,
+      "restaurant_id": 32867390117205804,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8915 Towne Centre Dr",
+        "formatted": "8915 Towne Centre Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.86739,
+        "lon": -117.205803
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:04.577Z"
+    },
+    {
+      "restaurant_name": "Rubio's Coastal Grill",
+      "restaurant_phone": "(858) 678-0611",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32890900117201570,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "9254 Scranton Rd Ste 105",
+        "formatted": "9254 Scranton Rd Ste 105 San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.8909,
+        "lon": -117.201569
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:04.992Z"
+    },
+    {
+      "restaurant_name": "Cozymel's Mexican Grill",
+      "restaurant_phone": "(858) 658-0480",
+      "restaurant_website": "http://www.cozymels.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32871814117213590,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4303 La Jolla Village Dr",
+        "formatted": "4303 La Jolla Village Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.871814,
+        "lon": -117.213593
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:05.776Z"
+    },
+    {
+      "restaurant_name": "Indian Express Restaurant San Diego",
+      "restaurant_phone": "(858) 505-9940",
+      "restaurant_website": "http://www.indianexpresssandiego.com/",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32834726117174340,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "5440 Clairemont Mesa Boulevard",
+        "formatted": "5440 Clairemont Mesa Boulevard San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.834726,
+        "lon": -117.174341
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:05.903Z"
+    },
+    {
+      "restaurant_name": "Tacone Flavor Grill",
+      "restaurant_phone": "(858) 450-1604",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32873659117208816,
+      "cuisines": [
+        "American",
+        "Barbecue",
+        "Sandwiches",
+        "Wraps"
+      ],
+      "address": {
+        "city": "SAN DIEGO",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4545 La Jolla Village Dr",
+        "formatted": "4545 La Jolla Village Dr SAN DIEGO, CA 92122"
+      },
+      "geo": {
+        "lat": 32.873659,
+        "lon": -117.208817
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:06.782Z"
+    },
+    {
+      "restaurant_name": "Luna Grill",
+      "restaurant_phone": "(858) 268-5862",
+      "restaurant_website": "https://locations.lunagrill.com/luna-grill-878652750bd3",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32818600117181200,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "4175 Genesee Avenue",
+        "formatted": "4175 Genesee Avenue San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.8186,
+        "lon": -117.1812
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:03.888Z"
+    },
+    {
+      "restaurant_name": "Virsa Indian Cuisine",
+      "restaurant_phone": "(858) 566-0806",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$$",
+      "price_range_num": 3,
+      "restaurant_id": 32878181117168584,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "6780 Miramar Rd #100",
+        "formatted": "6780 Miramar Rd #100 San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.878181,
+        "lon": -117.168585
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:04.464Z"
+    },
+    {
+      "restaurant_name": "Times Square NY Pizza & Bagels",
+      "restaurant_phone": "(858) 909-0024",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32894603117202264,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "9450 Scranton Rd #114-B",
+        "formatted": "9450 Scranton Rd #114-B San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.894603,
+        "lon": -117.202266
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:04.589Z"
+    },
+    {
+      "restaurant_name": "El Rey Taco Shop",
+      "restaurant_phone": "(858) 490-1190",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32823273117214130,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4386 Moraga Ave",
+        "formatted": "4386 Moraga Ave San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.823273,
+        "lon": -117.214127
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:04.630Z"
+    },
+    {
+      "restaurant_name": "Noodles & Company",
+      "restaurant_phone": "(858) 558-8511",
+      "restaurant_website": "https://locations.noodles.com/ca/san-diego/4545-la-jolla-village-drive.html",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32870700117210400,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4545 La Jolla Village Drive",
+        "formatted": "4545 La Jolla Village Drive San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.8707,
+        "lon": -117.2104
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:04.798Z"
+    },
+    {
+      "restaurant_name": "Nazca Grill",
+      "restaurant_phone": "(619) 677-6767",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$$",
+      "price_range_num": 3,
+      "restaurant_id": 32821580117183532,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4310 Genesee Ave",
+        "formatted": "4310 Genesee Ave San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.82158,
+        "lon": -117.183533
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:05.801Z"
+    },
+    {
+      "restaurant_name": "The Skybox San Diego",
+      "restaurant_phone": "(858) 273-1226",
+      "restaurant_website": "http://www.theskyboxsandiego.net/",
+      "hours": "",
+      "price_range": "$$",
+      "price_range_num": 2,
+      "restaurant_id": 32831105117205400,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4809 Clairemont Drive",
+        "formatted": "4809 Clairemont Drive San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.831105,
+        "lon": -117.2054
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:05.808Z"
+    },
+    {
+      "restaurant_name": "Jamba Juice",
+      "restaurant_phone": "(858) 272-2327",
+      "restaurant_website": "http://jambajuice.com",
+      "hours": "",
+      "price_range": "$",
+      "price_range_num": 1,
+      "restaurant_id": 32830203117205028,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4725 Clairemont Dr",
+        "formatted": "4725 Clairemont Dr San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.830203,
+        "lon": -117.205028
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:06.234Z"
+    },
+    {
+      "restaurant_name": "Craft Pizza Company",
+      "restaurant_phone": "(858) 550-5990",
+      "restaurant_website": "",
+      "hours": "",
+      "price_range": "$$$$",
+      "price_range_num": 4,
+      "restaurant_id": 32872215117211204,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4545 La Jolla Village Dr",
+        "formatted": "4545 La Jolla Village Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.872215,
+        "lon": -117.211205
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:42:06.385Z"
+    },
+    {
+      "restaurant_name": "Spot KTV & Restaurant",
+      "restaurant_phone": "(858) 268-1588",
+      "restaurant_website": "http:///ca/san-diego/719940-spot-ktv-restaurant/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32832520117160156,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7327 Clairemont Mesa Boulevard",
+        "formatted": "7327 Clairemont Mesa Boulevard San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.83252,
+        "lon": -117.160156
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:53.496Z"
+    },
+    {
+      "restaurant_name": "Simsim Outstanding Shawarma",
+      "restaurant_phone": "(858) 430-6717",
+      "restaurant_website": "http:///ca/san-diego/719826-simsim-outstanding-shawarma/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32831875117166040,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7051 Clairemont Mesa Boulevard",
+        "formatted": "7051 Clairemont Mesa Boulevard San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.831875,
+        "lon": -117.166039
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:53.920Z"
+    },
+    {
+      "restaurant_name": "Up and Atom Coffee",
+      "restaurant_phone": "(877) 585-1085",
+      "restaurant_website": "http:///ca/san-diego/719811-up-and-atom-coffee/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32888256117224296,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "4242 Campus Point Ct",
+        "formatted": "4242 Campus Point Ct San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.888256,
+        "lon": -117.224297
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:54.094Z"
+    },
+    {
+      "restaurant_name": "Shaka Coffee",
+      "restaurant_phone": "(858) 541-2444",
+      "restaurant_website": "http:///ca/san-diego/719798-shaka-coffee/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32820068117174280,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "6137 Balboa Avenue",
+        "formatted": "6137 Balboa Avenue San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.820068,
+        "lon": -117.174278
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:54.108Z"
+    },
+    {
+      "restaurant_name": "Pho Hut & Grill",
+      "restaurant_phone": "(858) 384-6753",
+      "restaurant_website": "http:///ca/san-diego/719763-pho-hut-grill/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32819370117183160,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "5252 Balboa Avenue",
+        "formatted": "5252 Balboa Avenue San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.81937,
+        "lon": -117.183159
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:54.262Z"
+    },
+    {
+      "restaurant_name": "Brick & Bell Cafe",
+      "restaurant_phone": "(858) 333-1673",
+      "restaurant_website": "http:///ca/san-diego/719759-brick-bell-cafe/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32854046117255270,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92037",
+        "street": "2216 Avenida De La Playa",
+        "formatted": "2216 Avenida De La Playa San Diego, CA 92037"
+      },
+      "geo": {
+        "lat": 32.854046,
+        "lon": -117.255272
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:54.295Z"
+    },
+    {
+      "restaurant_name": "Starbucks Coffee Co",
+      "restaurant_phone": "(858) 483-4670",
+      "restaurant_website": "http:///ca/san-diego/719780-starbucks-coffee-co/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32830338117205050,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4725 Clairemont Drive",
+        "formatted": "4725 Clairemont Drive San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.830338,
+        "lon": -117.205048
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:54.534Z"
+    },
+    {
+      "restaurant_name": "Double Time Coffee",
+      "restaurant_phone": "(858) 401-2078",
+      "restaurant_website": "http:///ca/san-diego/713654-double-time-coffee/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32927689117239044,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92130",
+        "street": "11512 El Camino Real",
+        "formatted": "11512 El Camino Real San Diego, CA 92130"
+      },
+      "geo": {
+        "lat": 32.927689,
+        "lon": -117.239044
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:54.794Z"
+    },
+    {
+      "restaurant_name": "Pinkberry Westfield UTC",
+      "restaurant_phone": "(858) 886-7188",
+      "restaurant_website": "http:///ca/san-diego/655186-pinkberry-westfield-utc/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32872292117211404,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4313 La Jolla Village Dr",
+        "formatted": "4313 La Jolla Village Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.872292,
+        "lon": -117.211403
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:56.304Z"
+    },
+    {
+      "restaurant_name": "P.F. Chang's",
+      "restaurant_phone": "(858) 458-9007",
+      "restaurant_website": "https://www.pfchangs.com/locations/us/ca/san-diego/4540-la-jolla-village-dr/1300-la-jolla.html?utm_source=YextMain&utm_medium=Directory",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32874200117209300,
+      "cuisines": [
+        "Chinese"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4540 La Jolla Village Dr.",
+        "formatted": "4540 La Jolla Village Dr. San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.8742,
+        "lon": -117.2093
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:56.528Z"
+    },
+    {
+      "restaurant_name": "Donato's Taco Shop",
+      "restaurant_phone": "(858) 530-0800",
+      "restaurant_website": "http:///ca/san-diego/624810-donatos-taco-shop/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32878914117168944,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "6780 Miramar Rd Ste 114",
+        "formatted": "6780 Miramar Rd Ste 114 San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.878914,
+        "lon": -117.168945
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:57.702Z"
+    },
+    {
+      "restaurant_name": "Sinjeon Food SYS",
+      "restaurant_phone": "(858) 836-9252",
+      "restaurant_website": "http:///ca/san-diego/622257-sinjeon-food-sys/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32821682117157212,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7725 Balboa Ave",
+        "formatted": "7725 Balboa Ave San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.821682,
+        "lon": -117.157211
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:58.027Z"
+    },
+    {
+      "restaurant_name": "Hi Street Chinese Kitchen",
+      "restaurant_phone": "(858) 430-6815",
+      "restaurant_website": "http:///ca/san-diego/603719-hi-street-chinese-kitchen/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32821270117155930,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7767 Balboa Ave",
+        "formatted": "7767 Balboa Ave San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.82127,
+        "lon": -117.15593
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:58.613Z"
+    },
+    {
+      "restaurant_name": "Shake Shack",
+      "restaurant_phone": "(619) 391-1571",
+      "restaurant_website": "http:///ca/san-diego/597681-shake-shack/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32870516117212284,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4309 La Jolla Village Dr",
+        "formatted": "4309 La Jolla Village Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.870516,
+        "lon": -117.212285
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:58.905Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 581-0130",
+      "restaurant_website": "http://www.subway.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32834270117183320,
+      "cuisines": [
+        "Sandwiches"
+      ],
+      "address": {
+        "city": "SAN DIEGO",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4973 Clairemont Mesa Blvd",
+        "formatted": "4973 Clairemont Mesa Blvd SAN DIEGO, CA 92117"
+      },
+      "geo": {
+        "lat": 32.83427,
+        "lon": -117.183321
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:59.822Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 450-1990",
+      "restaurant_website": "https://restaurants.subway.com/united-states/ca/san-diego/3861-governor-dr?utm_source=yext-other&utm_medium=local&utm_term=acq&utm_content=18730&utm_campaign=evergreen-2020&y_source=1_MTQ5MTQ5NjUtNzA4",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32854200117205100,
+      "cuisines": [
+        "Sandwiches"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "3861 Governor Dr",
+        "formatted": "3861 Governor Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.8542,
+        "lon": -117.2051
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:00.111Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 492-8338",
+      "restaurant_website": "https://restaurants.subway.com/united-states/ca/san-diego/4310-genesee-ave?utm_source=yext-other&utm_medium=local&utm_term=acq&utm_content=3473&utm_campaign=evergreen-2020&y_source=1_MTQ5MTEzNjctNzA4L",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32821700117183600,
+      "cuisines": [
+        "Sandwiches"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4310 Genesee Ave.",
+        "formatted": "4310 Genesee Ave. San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.8217,
+        "lon": -117.1836
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:00.711Z"
+    },
+    {
+      "restaurant_name": "La palapa Taco shop",
+      "restaurant_phone": "(619) 820-7003",
+      "restaurant_website": "http:///ca/san-diego/651039-la-palapa-taco-shop/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32823292117214120,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4386 Moraga Ave",
+        "formatted": "4386 Moraga Ave San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.823292,
+        "lon": -117.214119
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:56.655Z"
+    },
+    {
+      "restaurant_name": "Katzya Chicken",
+      "restaurant_phone": "(213) 335-8489",
+      "restaurant_website": "http:///ca/san-diego/637592-katzya-chicken/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32821681117157210,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7725 Balboa Ave",
+        "formatted": "7725 Balboa Ave San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.821681,
+        "lon": -117.157208
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:56.904Z"
+    },
+    {
+      "restaurant_name": "Lemonade",
+      "restaurant_phone": "(858) 251-0912",
+      "restaurant_website": "http:///ca/san-diego/633826-lemonade/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32869762117212340,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4525 La Jolla Village Dr",
+        "formatted": "4525 La Jolla Village Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.869762,
+        "lon": -117.212341
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:56.975Z"
+    },
+    {
+      "restaurant_name": "Barolo Ristorante",
+      "restaurant_phone": "(858) 622-1202",
+      "restaurant_website": "http://www.barolos.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32867955117207120,
+      "cuisines": [
+        "Italian"
+      ],
+      "address": {
+        "city": "SAN DIEGO",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8935 Towne Centre Dr",
+        "formatted": "8935 Towne Centre Dr SAN DIEGO, CA 92122"
+      },
+      "geo": {
+        "lat": 32.867955,
+        "lon": -117.207119
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:57.430Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 565-1751",
+      "restaurant_website": "http://www.subway.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32832477117163136,
+      "cuisines": [
+        "Sandwiches"
+      ],
+      "address": {
+        "city": "SAN DIEGO",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7153 Clairemont Mesa Blvd",
+        "formatted": "7153 Clairemont Mesa Blvd SAN DIEGO, CA 92111"
+      },
+      "geo": {
+        "lat": 32.832477,
+        "lon": -117.163135
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:59.574Z"
+    },
+    {
+      "restaurant_name": "Buga Korean BBQ",
+      "restaurant_phone": "(858) 560-1010",
+      "restaurant_website": "http:///ca/san-diego/596703-buga-korean-bbq/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32834343117172570,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "5580 Clairemont Mesa Blvd",
+        "formatted": "5580 Clairemont Mesa Blvd San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.834343,
+        "lon": -117.172569
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:40:59.871Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 678-0129",
+      "restaurant_website": "https://restaurants.subway.com/united-states/ca/san-diego/8650-genesee-ave?utm_source=yext-other&utm_medium=local&utm_term=acq&utm_content=3618&utm_campaign=evergreen-2020&y_source=1_MTQ5MTI3NTktNzA4L",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32869400117215400,
+      "cuisines": [
+        "Sandwiches"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8650 Genesee Ave.",
+        "formatted": "8650 Genesee Ave. San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.8694,
+        "lon": -117.2154
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:00.611Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 831-9282",
+      "restaurant_website": "https://restaurants.subway.com/united-states/ca/san-diego/6780-miramar-rd?utm_source=yext-other&utm_medium=local&utm_term=acq&utm_content=1432&utm_campaign=evergreen-2020&y_source=1_MTQ5MDA1OTctNzA4LW",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32878800117169100,
+      "cuisines": [
+        "Sandwiches"
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "6780 Miramar Rd",
+        "formatted": "6780 Miramar Rd San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.8788,
+        "lon": -117.1691
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:01.092Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 279-7911",
+      "restaurant_website": "https://restaurants.subway.com/united-states/ca/san-diego/7710-balboa-ave?utm_source=yext-other&utm_medium=local&utm_term=acq&utm_content=46486&utm_campaign=evergreen-2020&y_source=1_MTQ5MDM3MDAtNzA4L",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32822400117157600,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92111",
+        "street": "7710 Balboa Ave",
+        "formatted": "7710 Balboa Ave San Diego, CA 92111"
+      },
+      "geo": {
+        "lat": 32.8224,
+        "lon": -117.1576
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:01.415Z"
+    },
+    {
+      "restaurant_name": "Poke Subarashi",
+      "restaurant_phone": "(858) 457-5550",
+      "restaurant_website": "http:///ca/san-diego/587294-poke-subarashi/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32861958117224590,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "7728 Regents Rd Ste 501",
+        "formatted": "7728 Regents Rd Ste 501 San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.861958,
+        "lon": -117.224594
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:01.929Z"
+    },
+    {
+      "restaurant_name": "Copa Vida",
+      "restaurant_phone": "(858) 322-6060",
+      "restaurant_website": "http:///ca/san-diego/587349-copa-vida/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32905022117228890,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "11055 Roselle St Ste 105",
+        "formatted": "11055 Roselle St Ste 105 San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.905022,
+        "lon": -117.22889
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:01.932Z"
+    },
+    {
+      "restaurant_name": "Tapioca Express(Regents Rd)",
+      "restaurant_phone": "(858) 597-0088",
+      "restaurant_website": "http:///ca/san-diego/586180-tapioca-express/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32862816117224364,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "7770 Regents Rd Ste 101",
+        "formatted": "7770 Regents Rd Ste 101 San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.862816,
+        "lon": -117.224365
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:02.095Z"
+    },
+    {
+      "restaurant_name": "Gourmet Island Bistro",
+      "restaurant_phone": "(858) 268-7717",
+      "restaurant_website": "http:///ca/san-diego/585545-gourmet-island-bistro/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32836769117126104,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92123",
+        "street": "5625 Ruffin Rd Ste 140",
+        "formatted": "5625 Ruffin Rd Ste 140 San Diego, CA 92123"
+      },
+      "geo": {
+        "lat": 32.836769,
+        "lon": -117.126106
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:02.219Z"
+    },
+    {
+      "restaurant_name": "Edible Arrangements",
+      "restaurant_phone": "(858) 565-1555",
+      "restaurant_website": "http:///ca/san-diego/582555-edible-arrangements/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32822063117184348,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4340 Genesse Ave",
+        "formatted": "4340 Genesse Ave San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.822063,
+        "lon": -117.184349
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:02.268Z"
+    },
+    {
+      "restaurant_name": "Subway",
+      "restaurant_phone": "(858) 581-0130",
+      "restaurant_website": "https://restaurants.subway.com/united-states/ca/san-diego/4973-a-clairemont-drive?utm_source=yext-other&utm_medium=local&utm_term=acq&utm_content=10750&utm_campaign=evergreen-2020&y_source=1_MTQ5MTAxM",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32832800117202600,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92110",
+        "street": "4973-A Clairemont Drive",
+        "formatted": "4973-A Clairemont Drive San Diego, CA 92110"
+      },
+      "geo": {
+        "lat": 32.8328,
+        "lon": -117.2026
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:24.627Z"
+    },
+    {
+      "restaurant_name": "Tutto Mare Ristorante",
+      "restaurant_phone": "(858) 597-1188",
+      "restaurant_website": "http://www.tuttomare.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32874997117213532,
+      "cuisines": [
+        "Italian"
+      ],
+      "address": {
+        "city": "SAN DIEGO",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "4365 Executive Dr",
+        "formatted": "4365 Executive Dr SAN DIEGO, CA 92121"
+      },
+      "geo": {
+        "lat": 32.874997,
+        "lon": -117.213531
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:24.699Z"
+    },
+    {
+      "restaurant_name": "Kroran Uyghur Cuisine",
+      "restaurant_phone": "(858) 430-6730",
+      "restaurant_website": "http:///ca/san-diego/575636-kroran-uyghur-cuisine/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32821336117183736,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92117",
+        "street": "4310 Genesee Ave Ste 105",
+        "formatted": "4310 Genesee Ave Ste 105 San Diego, CA 92117"
+      },
+      "geo": {
+        "lat": 32.821336,
+        "lon": -117.183734
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:24.960Z"
+    },
+    {
+      "restaurant_name": "BT Chinese Kitchen",
+      "restaurant_phone": "(858) 200-2016",
+      "restaurant_website": "http:///ca/san-diego/574697-bt-chinese-kitchen/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32879131117168984,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92121",
+        "street": "6780 Miramar Rd Ste 104",
+        "formatted": "6780 Miramar Rd Ste 104 San Diego, CA 92121"
+      },
+      "geo": {
+        "lat": 32.879131,
+        "lon": -117.168984
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:25.063Z"
+    },
+    {
+      "restaurant_name": "AAHARN at University City",
+      "restaurant_phone": "(858) 242-6389",
+      "restaurant_website": "http:///ca/san-diego/573627-aaharn-at-university-city/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32852207117214744,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "3324 Governor Dr",
+        "formatted": "3324 Governor Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.852207,
+        "lon": -117.214745
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:25.254Z"
+    },
+    {
+      "restaurant_name": "kisake inc",
+      "restaurant_phone": "(858) 404-0707",
+      "restaurant_website": "http:///ca/san-diego/572900-ki-sushi-sake-bar/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32868130117215120,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8650 Genesee Ave Ste 105",
+        "formatted": "8650 Genesee Ave Ste 105 San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.86813,
+        "lon": -117.215118
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:25.442Z"
+    },
+    {
+      "restaurant_name": "Poke UTC",
+      "restaurant_phone": "(858) 202-1688",
+      "restaurant_website": "http:///ca/san-diego/571703-poke-utc/",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32867329117206360,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "8895 Towne Centre Dr Ste 109",
+        "formatted": "8895 Towne Centre Dr Ste 109 San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.867329,
+        "lon": -117.20636
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:25.559Z"
+    },
+    {
+      "restaurant_name": "Tocaya Organica",
+      "restaurant_phone": "(858) 333-7920",
+      "restaurant_website": "http://tocayaorganica.com",
+      "hours": "",
+      "price_range": "",
+      "price_range_num": 0,
+      "restaurant_id": 32872200117212700,
+      "cuisines": [
+        ""
+      ],
+      "address": {
+        "city": "San Diego",
+        "state": "CA",
+        "postal_code": "92122",
+        "street": "4301 La Jolla Village Dr",
+        "formatted": "4301 La Jolla Village Dr San Diego, CA 92122"
+      },
+      "geo": {
+        "lat": 32.8722,
+        "lon": -117.2127
+      },
+      "menus": [],
+      "last_updated": "2021-01-05T07:41:26.076Z"
+    }
+  ],
+  "numResults": 100
+}
