@@ -6,10 +6,10 @@ from discord.ext import commands
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-extensions = ['raidBot', 'utilBot', 'foodBot', 'imgBot', 'leagueBot']
+extensions = ['raidBot', 'foodBot', 'leagueBot', 'utilBot']
 
 for exten in extensions:
-	bot.load_extension(exten)
+	bot.load_extension('bots.{}'.format(exten))
 
 @bot.event
 async def on_ready():

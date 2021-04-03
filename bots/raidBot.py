@@ -116,8 +116,6 @@ class RaidBot(commands.Cog):
 
 	# This is called after the list is updated so we can also update the message
 	async def updateMessage(self, message):
-		print('Updating Message')
-		print(raidDict[message.id][CANCELLED])
 		# Create the base message with all of the formatting arranged.
 		baseMsg = 'Raid {}: {} \nTime: {} \nInitiator: {}'
 		# Mark as cancelled if the raid is cancelled
