@@ -1,17 +1,23 @@
 from discord.ext import commands
+from config import DAD_ID
 import discord, json
 
 # FILE PATHS
 jsonPath = 'data/json/'
+reactPath = 'data/images/reactions/'
+
 # TODO: Send back user feedback on error
 # Use discord.commands.on_error probs
-# TODO: Add a dad check
+image_types = ["png", "jpeg", "gif", "jpg"]
+
+
 async def meCheck(ctx):
 	appInfo = await ctx.bot.application_info()
 	return ctx.author.id == appInfo.owner.id
 
+# Generic checks
 async def dadCheck(ctx):
-	return ctx.author.id == 575872224620183553
+	return ctx.author.id == DAD_ID
 
 class NotAnAdmin(commands.CheckFailure):
 	pass
