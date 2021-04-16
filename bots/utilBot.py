@@ -90,6 +90,17 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 		embed = discord.Embed(description=linkText.replace(']', ']({})'.format(link)))
 		await ctx.send(embed=embed)
 
+	@commands.command(name='diceRoll', aliases=['d'], brief='Rolls random numbers', \
+		usage="""Run with !d "<min> <max>". \nNote: If given one number the min is 0 by default""")
+	async def diceRoll(max, min=0):
+		if max < min:
+			max, min = min, max
+		output = secrets.randbelow(max+1)
+		while output < min:
+			output = secrets.randbelow(max+1)
+		await ctx.message.delete()
+		await ctx.send('You asked for a random number between {0} and {1}:\nYou have rolled a {2}'.format(min,max,output))
+
 	# Regular shut down of the bot
 	@commands.command(name='s', hidden=True)	
 	@adminCheck()
