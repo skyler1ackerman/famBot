@@ -2,7 +2,7 @@ import asyncio, datetime, unicodedata # , ffmpeg, youtube_dl
 from random import choice
 from nltk import tokenize
 from .common import *
-
+import secrets
 me = discord.Client()
 
 def setup(bot):
@@ -92,7 +92,7 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 
 	@commands.command(name='diceRoll', aliases=['d'], brief='Rolls random numbers', \
 		usage="""Run with !d "<min> <max>". \nNote: If given one number the min is 0 by default""")
-	async def diceRoll(max, min=0):
+	async def diceRoll(self, ctx, min:int, max:int=0):
 		if max < min:
 			max, min = min, max
 		output = secrets.randbelow(max+1)
