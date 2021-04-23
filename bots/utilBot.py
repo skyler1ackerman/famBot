@@ -1,4 +1,4 @@
-import asyncio, datetime, unicodedata, re # , ffmpeg, youtube_dl
+import asyncio, datetime, unicodedata, re, secrets # , ffmpeg, youtube_dl
 from dateutil.parser import parse
 from random import choice
 from nltk import tokenize
@@ -164,6 +164,17 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 		await ctx.message.delete()
 		embed = discord.Embed(description=linkText.replace(']', ']({})'.format(link)))
 		await ctx.send(embed=embed)
+
+	@commands.command(name='diceRoll', aliases=['d'], brief='Rolls random numbers', \
+		usage="""Run with !d "<min> <max>". \nNote: If given one number the min is 0 by default""")
+	async def diceRoll(self, ctx, min:int, max:int=0):
+		if max < min:
+			max, min = min, max
+		output = secrets.randbelow(max+1)
+		while output < min:
+			output = secrets.randbelow(max+1)
+		await ctx.message.delete()
+		await ctx.send('You asked for a random number between {0} and {1}:\nYou have rolled a {2}'.format(min,max,output))
 
 	# Regular shut down of the bot
 	@commands.command(name='s', hidden=True)	
