@@ -1,21 +1,96 @@
-import asyncio, datetime, unicodedata # , ffmpeg, youtube_dl
+import asyncio, datetime, unicodedata, re # , ffmpeg, youtube_dl
+from dateutil.parser import parse
 from random import choice
 from nltk import tokenize
 from .common import *
+from random import choice
 
 me = discord.Client()
 
 def setup(bot):
 	bot.add_cog(UtilBot(bot))
 
+# TODO: Cogs inheritance?
 class UtilBot(commands.Cog, description='General Utility Functions'):
 	def __init__(self, bot):
 		# Init the bot
 		self.bot = bot
 
+	@commands.command(name='alarm', help="""Sets a timer for a given datetime.
+		\nJust put the datetime anywhere in the string in pretty much any format""")
+	async def alarm(self, ctx, *, message):
+		datetime, message = parse(message, fuzzy_with_tokens = True)
+		message = re.sub(' +', ' ', " ".join(message))
+		await asyncio.sleep((datetime - datetime.now()).total_seconds())
+		await ctx.send(f'{ctx.author.mention} - {message}')
+
+	@commands.command(name='timer', help='Sets a timer after a certain number of minutes.\nUse with !timer <minutes> <message>')
+	async def timer(self, ctx, minutes:int, *, message):
+		await asyncio.sleep(minutes*60)
+		await ctx.send(f'{ctx.author.mention} - {message}')
+
+	@commands.command(name='coinToss', aliases=['ct'], help='Flips a coin!')
+	async def coinToss(self, ctx):
+		opList = ['Heads!', 'Tails!']
+		await ctx.send(choice(opList))
+
+	@commands.command(name='requestRole', aliases=['rr'], brief='Requests a role', \
+		help='Requests a role by sending a dm to the guild owner.')
+	async def requestRole(self, ctx, role:discord.Role):
+		await ctx.send('Requesting role, standby')
+		await ctx.guild.owner.create_dm()
+		reqMsg = await ctx.guild.owner.dm_channel.send("""User {0.author.name} is requesting the {1} role '+ 
+			in the {0.guild.name} server""".format(ctx, role.name))
+		await reqMsg.add_reaction('✅')
+		await reqMsg.add_reaction('❌')
+
+		async def giveRole(ctx):
+			await ctx.author.add_roles(role)
+			await ctx.send(f'Request approved by {ctx.guild.owner.name}')
+
+		async def rejectRole(ctx):
+			await ctx.send(f'Request rejected by {ctx.guild.owner.name}')
+
+		optionDict = {'✅':giveRole,'❌':rejectRole}
+		# Returns the check if the reaction is in the optionDict
+		def check(react, user_):
+			return str(react.emoji) in optionDict.keys() and user_==ctx.guild.owner
+		try:
+			react, owner = await self.bot.wait_for('reaction_add', timeout=60, check=check)
+		except asyncio.TimeoutError:
+			await ctx.send('Request timed out :frowning:')
+		else:
+			await optionDict[react.emoji](ctx)
+
+	@commands.command(name='addRoles', hidden=True, checks=[meCheck])
+	@commands.has_permissions(manage_roles=True)
+	async def makeRoles(self, ctx, *, roles):
+		for role in str.split(roles):
+			r = await ctx.guild.create_role(name=role, mentionable=True)
+
+	@commands.command(name='giveRole', aliases=['gr'], \
+		help='Gives you any existing role with no extra permissions\nUse with !gr @<role> @<role> ... @<role>')
+	async def giveRole(self, ctx, roles:commands.Greedy[discord.Role]):
+		for role in roles:
+			if(role.permissions<=ctx.author.guild_permissions):
+				await ctx.author.add_roles(role)
+			else:
+				await ctx.send(f'The {role.name} role is not accessible with this command.')
+
+	@commands.command(name='makeInv', aliases=['mi'], hidden=True)
+	async def createInvite(self, ctx):
+		me = await self.bot.fetch_user(myId)
+		newGuild = await self.bot.create_guild(name='BotGuild')
+		# print(newGuild.text_channels)
+		await me.create_dm()
+		# TODO: Why does this not work with newGuild?
+		await me.dm_channel.send((await self.bot.guilds[-1].text_channels[0].create_invite()))
+
+
 	@commands.command(name='repeat', aliases=['r','spam'], brief='Repeats a string!', \
 	 usage='!r <num> <string> to repeat the string "num" times.')
 	async def repeat(self, ctx, num:int, *, rString):
+		await ctx.message.delete()
 		for _ in range(num):
 			await ctx.send(rString)
 

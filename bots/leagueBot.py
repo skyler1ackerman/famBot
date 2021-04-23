@@ -2,10 +2,7 @@ import discord, json, asyncio
 import requests, requests, urllib.parse, json
 from bs4 import BeautifulSoup
 from discord.ext import commands
-
-# Custom Errors
-class NotAnAdmin(commands.CheckFailure):
-	pass
+from .common import *
 
 def setup(bot):
 	bot.add_cog(LeagueBot(bot))
@@ -14,14 +11,6 @@ class LeagueBot(commands.Cog):
 	def __init__(self, bot):
 		# Init the bot
 		self.bot = bot
-
-	# Custom Error Checking
-	def adminCheck():
-		async def adminError(ctx):
-			if not ctx.author.guild_permissions.administrator:
-				raise NotAnAdmin('You are not an admin!')
-			return True
-		return commands.check(adminError)
 
 	def getCountersDict(self, champ):
 		# Create the url using the champ inputed
