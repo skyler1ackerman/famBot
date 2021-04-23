@@ -8,7 +8,7 @@ reactPath = 'data/images/reactions/'
 
 # TODO: Send back user feedback on error
 # Use discord.commands.on_error probs
-image_types = ["png", "jpeg", "gif", "jpg"]
+image_types = ["png", "jpeg", "gif", "jpg", "webm"]
 
 
 async def meCheck(ctx):
