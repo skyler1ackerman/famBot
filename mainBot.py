@@ -4,9 +4,9 @@ from config import TOKEN as TOKEN
 from discord.ext import commands
 
 intents = discord.Intents.all()
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='-', intents=intents)
 
-extensions = ['raidBot', 'foodBot', 'leagueBot', 'utilBot']
+extensions = ['raidBot', 'foodBot', 'leagueBot', 'utilBot', 'qinnBot']
 
 for exten in extensions:
 	bot.load_extension('bots.{}'.format(exten))

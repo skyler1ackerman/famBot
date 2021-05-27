@@ -160,7 +160,7 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	@commands.command(name='makeLink', aliases=['ml'], brief='Sends an embeddeded link', \
 		usage="""Run with !ml "<linkText>" <link>. \nNote: The linkText must include "[]" 
 		around the word you want to contain the embed. \nNote: The link must be of type http or https.""")
-	async def makeLink(self, ctx, linkText,link):
+	async def makeLink(self, ctx, linkText, link):
 		await ctx.message.delete()
 		embed = discord.Embed(description=linkText.replace(']', ']({})'.format(link)))
 		await ctx.send(embed=embed)
@@ -182,3 +182,7 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	async def shutdown(self, ctx):
 		await ctx.send('Shutting down Fam Bot')
 		await ctx.bot.logout()
+
+
+		# https://dan-ball.jp/en/javagame/dust/
+		# .swapcase() to !mock
