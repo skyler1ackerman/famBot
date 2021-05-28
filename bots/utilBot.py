@@ -4,8 +4,13 @@ from random import choice
 from nltk import tokenize
 from .common import *
 from random import choice
+from github import Github
+from config import GITHUB_TOKEN
 
 me = discord.Client()
+
+g = Github(GITHUB_TOKEN)
+famBot = g.get_repo('skyler1ackerman/famBot')
 
 def setup(bot):
 	bot.add_cog(UtilBot(bot))
@@ -15,6 +20,19 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	def __init__(self, bot):
 		# Init the bot
 		self.bot = bot
+
+	# @commands.command(name='anon', help='Send an anonymous message to a given channel in a given server')
+	# async def anonymousMessage(self, ctx, guild, channel, *, message):
+	# 	ctx.bot.fetch_guilds().get(name=guild)
+
+	@commands.command(name='feedback', help="""Run with !feedback <suggestion>. Sends feedback directly to the Github page. 
+		Please be as specific as possible with what you want the bot to be able to do, or what it does now that you 
+		want it to do better. It's fine if your suggestion is long""", \
+		brief='Sends feedback to the Github')
+	async def feedback(self, ctx, *, message):
+		issue = famBot.create_issue(title=f'Suggestion from {ctx.author.name}', body=message, assignees=[g.get_user().login])
+		await ctx.send(embed=discord.Embed(description=f"""Thanks for the suggestion {ctx.author.name}! You can check out your 
+			suggestion [here]({issue.html_url})""", color=discord.Color.green()))
 
 	@commands.command(name='alarm', help="""Sets a timer for a given datetime.
 		\nJust put the datetime anywhere in the string in pretty much any format""")
@@ -91,6 +109,9 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	 usage='!r <num> <string> to repeat the string "num" times.')
 	async def repeat(self, ctx, num:int, *, rString):
 		await ctx.message.delete()
+		if num > 10:
+			await ctx.send('Nice try')
+			return
 		for _ in range(num):
 			await ctx.send(rString)
 

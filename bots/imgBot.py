@@ -1,10 +1,6 @@
 import os
 from .common import *
 
-# Custom Errors
-class NotAnAdmin(commands.CheckFailure):
-	pass
-
 def setup(bot):
 	bot.add_cog(imgBot(bot))
 
