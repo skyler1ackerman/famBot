@@ -177,7 +177,7 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 		await ctx.send('You asked for a random number between {0} and {1}:\nYou have rolled a {2}'.format(min,max,output))
 
 	# Regular shut down of the bot
-	@commands.command(name='s', hidden=True)	
+	@commands.command(name='s', aliases=['是'], hidden=True)	
 	@adminCheck()
 	async def shutdown(self, ctx):
 		await ctx.send('Shutting down Fam Bot')

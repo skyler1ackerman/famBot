@@ -40,10 +40,12 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 	def fetchPage(URL):
 		options = Options()
 		options.headless = True
-		driver = webdriver.Firefox()
+		# options.page_load_strategy = 'normal'
+		driver = webdriver.Firefox(options=options)
 		driver.get(URL)
 		# I had to add this to give the page time to run the js
-		time.sleep(1)
+		# use https://www.selenium.dev/documentation/en/webdriver/waits/ later to fix this
+		time.sleep(0.5)
 		fetchedhtml = driver.page_source
 		soup = BeautifulSoup(fetchedhtml, 'html5lib')
 		driver.close()
@@ -61,6 +63,8 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 # pulls the info from a single character page and calls dictEntry() on it, returning that
 # why are these two functions not combined? I cant remember either, but I did that on purpose a while ago
 	def lookup(char):
+		if len(str(char)) < 1:
+			raise ValueError
 		URL = 'https://www.archchinese.com/chinese_english_dictionary.html?find=' + str(char).strip('\',();a')
 		soup = QinnBot.fetchPage(URL)
 		for found_class in soup.find_all(id='charDetailPane') or []:
@@ -72,6 +76,10 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 # pulls a whole list of words and their info out of a page and parses them
 # does it better
 	def itemizeWordsButBetter(*char):
+		print(str(char))
+		if len(str(char).replace(',','')) <= 1:
+			return QinnBot.lookup(char)
+			pass
 		URL = 'https://www.archchinese.com/chinese_english_dictionary.html?find=' + str(char).strip('\',();a')
 		outputList = {}
 		soup = QinnBot.fetchPage(URL)
@@ -109,7 +117,7 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 		for key in output_list.keys():
 			embed.insert_field_at(0,
 				name='{0} : {1}'.format(key, output_list.get(key, 'eRrOr').get('Definition', 'bottom level error')), 
-				value='{0} Pinyin: {1}'.format(output_list.get(key, 'top level error').get('Iterator', 'bottom level error'), output_list.get(key, 'top level error').get('Pinyin', 'bottom level error')),
+				value='{1}'.format(output_list.get(key, 'top level error').get('Iterator', 'bottom level error'), output_list.get(key, 'top level error').get('Pinyin', 'bottom level error')),
 				inline=False)
 		await ctx.send(embed=embed)
 
@@ -117,21 +125,22 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 # is currently broken
 	@commands.command(name='qinnChar', aliases=['qinnchar','QinnChar','QinChar','qc','qinchar','清楚'], 
 	help='Looks up a single Chinese character using the Archchinese online dictionary')
-	async def qinnChar(self, ctx, char):
-		print(char)
-		output_list = QinnBot.lookup(char[1])
-		output_string = str(output_list)
-		print(output_list)
-		embed = discord.Embed(colour=discord.Colour.blurple()) #, description=output_string)
-		embed.add_field(name='{} : {}'.format(char[:1], output_list.get('Definition', 'not found')),
-				value='{0} | Subchars: {2} {3} \n Encoding: {1}'.format(output_list.get('Pinyin'), output_list.get('Character Encoding'), output_list.get('Radical').strip('. '), output_list.get('Component').strip('. ')),
-				inline=False)
-		await ctx.send(embed=embed)
+	async def qinnChar(self, ctx, chars):
+		print(chars)
+		for single_char in chars:
+			output_list = QinnBot.lookup(single_char)
+			output_string = str(output_list)
+			print(output_list)
+			embed = discord.Embed(colour=discord.Colour.blurple()) #, description=output_string)
+			embed.add_field(name='{} : {}'.format(single_char[:1], output_list.get('Definition', 'not found')),
+					value='{0}  |  Subchars: {2} {3}  |  Part of: {4}\n Encoding: {1}'.format(output_list.get('Pinyin'), output_list.get('Character Encoding'), str(output_list.get('Radical')).strip('. '), str(output_list.get('Component')).strip('. '), str(output_list.get('Part of')).strip('. ')),
+					inline=False)
+			await ctx.send(embed=embed)
 
 
 
 
-
+# reaction.message
 
 
 
