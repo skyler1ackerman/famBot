@@ -2,6 +2,7 @@ from discord.ext import commands
 from config import DAD_ID
 import discord, json
 
+version = '1.0'
 # FILE PATHS
 jsonPath = 'data/json/'
 reactPath = 'data/images/reactions/'
