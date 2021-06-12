@@ -6,6 +6,7 @@ from .common import *
 from random import choice
 from github import Github
 from config import GITHUB_TOKEN
+from gtts import gTTS
 
 me = discord.Client()
 
@@ -24,6 +25,28 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	# @commands.command(name='anon', help='Send an anonymous message to a given channel in a given server')
 	# async def anonymousMessage(self, ctx, guild, channel, *, message):
 	# 	ctx.bot.fetch_guilds().get(name=guild)
+
+
+	@commands.command(name='read', help="""Run with !read <message> to have the bot read your message in whatever 
+		channel you're in. Must be connected to a channel to use.""", \
+		brief='Reads a message into a voice channel')
+	async def read(self, ctx):
+		gTTS(text=ctx.message.content.partition(' ')[2], lang='en', slow=False, tld='co.in').save('data/mp3/reader.mp3')
+		myFile = discord.FFmpegPCMAudio(executable="C:/FFmpeg/bin/ffmpeg.exe", source='data/mp3/reader.mp3')
+		vc = await ctx.author.voice.channel.connect()
+		vc.play(myFile)
+		while vc.is_playing():
+			await asyncio.sleep(1)
+		await ctx.message.guild.voice_client.disconnect()
+
+	@commands.Cog.listener()
+	async def on_message(self, message):
+		eightBall = ['It is Certain.', 'It is decidedly so.', 'Without a doubt.', 'Yes definitely.', 'You may rely on it.',
+		'As I see it, yes.', ' Most likely.', 'Outlook good.', 'Yes.', 'Signs point to yes.', 'Reply hazy, try again.'
+		'Ask again later.', 'Better not tell you now.', 'Cannot predict now.', 'Concentrate and ask again.',
+		'Don\'t count on it.', 'My reply is no.', 'My sources say no.', 'Outlook not so good.', 'Very doubtful.']
+		if message.content.startswith(self.bot.user.mention) and message.content.endswith('?'):
+			await message.channel.send(choice(eightBall))
 
 	@commands.command(name='feedback', help="""Run with !feedback <suggestion>. Sends feedback directly to the Github page. 
 		Please be as specific as possible with what you want the bot to be able to do, or what it does now that you 
