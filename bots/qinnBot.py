@@ -12,35 +12,14 @@ me = discord.Client()
 def setup(bot):
 	bot.add_cog(QinnBot(bot))
 
-# # TODO: Cogs inheritance? # I left this here but idk what it means
 class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 	def __init__(self, bot):
-# 		# Init the bot
 		self.bot = bot
-
-
-# This is my attempt to salvage my first version of this command. 
-#It literally just Let-Me-Google-That-For-Yous the word on Archchinese
-	# @commands.command(name='qinLink', aliases=['Qinlink','QinLink','ql','Qlink'], 
-	# 	help='Links to a word using the Archchinese online dictionary')
-	# async def QLink(self, ctx, char):
-	# 	print(str(char))
-	# 	# embed = discord.Embed(type='article', description=str(char), 
-	# 	# 	url='https://www.archchinese.com/chinese_english_dictionary.html?find='
-	# 	# 	+ str(char).strip('\',();'))
-	# 	link = 
-	# 	embed = discord.Embed(description='[' + str(char) 
-	# 		+ '](https://www.archchinese.com/chinese_english_dictionary.html?find=' 
-	# 		+ str(char).strip('\',();') +') on Archchinese')
-	# 	# print(embed.description, ' and url: ', embed.url)
-
-	# 	await ctx.send(embed=embed)
 
 # snags a URL and returns the "soup"
 	def fetchPage(URL):
 		options = Options()
 		options.headless = True
-		# options.page_load_strategy = 'normal'
 		driver = webdriver.Firefox(options=options)
 		driver.get(URL)
 		# I had to add this to give the page time to run the js
@@ -74,7 +53,6 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 		return None
 
 # pulls a whole list of words and their info out of a page and parses them
-# does it better
 	def itemizeWordsButBetter(*char):
 		print(str(char))
 		if len(str(char).replace(',','')) <= 1:
@@ -89,7 +67,6 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 		CHARS = '!did not assign!'
 		words_panel = soup.find(id='wordPaneContent').get_text()
 		words_panel = words_panel.replace(u'\xa0', u' ')
-		# print('\n'+words_panel)
 		input_list = words_panel.rsplit(']')
 		DEFINITION = input_list[-1].strip()
 		del input_list[-1]
@@ -100,10 +77,7 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 			ITERATOR = sliced_string[sliced_string.rfind('0' or '1'):sliced_string.rfind('0' or '1')+2].strip()
 			outputList[CHARS] = {'Simplified Form': CHARS, 'Pinyin': PINYIN, 'Definition': DEFINITION, 'Iterator': ITERATOR}
 			DEFINITION = sliced_string[1:(sliced_string.rfind('0' or '1') if (sliced_string.rfind('0' or '1')) > 0 else None)].strip()
-			# print('\n'+str(sliced_string))		
-		# print('\n'+str(outputList))
 		return outputList
-
 
 # discord-callable function to look up a bunch of words and parse them
 # needs some keyword arguments or something to include or disinclude info about a word
@@ -113,7 +87,7 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 	async def qinnLookup(self, ctx, char):
 		output_list = QinnBot.itemizeWordsButBetter(char)
 		output_string = str(output_list)
-		embed = discord.Embed(colour=discord.Colour.blurple()) #, description=output_string)
+		embed = discord.Embed(colour=discord.Colour.blurple())
 		for key in output_list.keys():
 			embed.insert_field_at(0,
 				name='{0} : {1}'.format(key, output_list.get(key, 'eRrOr').get('Definition', 'bottom level error')), 
@@ -122,7 +96,6 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 		await ctx.send(embed=embed)
 
 # discord-callable function to look up single character
-# is currently broken
 	@commands.command(name='qinnChar', aliases=['qinnchar','QinnChar','QinChar','qc','qinchar','清楚'], 
 	help='Looks up a single Chinese character using the Archchinese online dictionary')
 	async def qinnChar(self, ctx, chars):
@@ -136,85 +109,3 @@ class QinnBot(commands.Cog, description='Chinese Dictionary Functions'):
 					value='{0}  |  Subchars: {2} {3}  |  Part of: {4}\n Encoding: {1}'.format(output_list.get('Pinyin'), output_list.get('Character Encoding'), str(output_list.get('Radical')).strip('. '), str(output_list.get('Component')).strip('. '), str(output_list.get('Part of')).strip('. ')),
 					inline=False)
 			await ctx.send(embed=embed)
-
-
-
-
-# reaction.message
-
-
-
-# @TODO await page load
-
-# @TODO formatter function 
-# 	intakes Definition or Pinyin and returns the value
-# 	implement @lru_cache ? escpecially for dictentry() and fetchpage()
-
-
-# my hands hold my head
-# why did microsoft windows
-# change desk.cpl
-
-
-# reference for lookups
-
-# Definition
-# Pinyin
-# Radical
-# Component
-# Traditional Form
-# Parts of Speech
-# Stroke Count
-# Measure Word
-# Same Pronunciation
-# See Also
-# Usage
-# Structure
-# HSK Level
-# Bopomofo (Zhuyin)
-# Cantonese (Jyutping)
-# Input Method Codes
-# Character Encoding
-# Formation
-
-
-	# @commands.command(name='coinToss', aliases=['ct'], help='Flips a coin!')
-	# async def coinToss(self, ctx):
-	# 	opList = ['Heads!', 'Tails!']
-	# 	await ctx.send(choice(opList))
-
-	# @commands.command(name='requestRole', aliases=['rr'], brief='Requests a role', \
-	# 	help='Requests a role by sending a dm to the guild owner.')
-	# async def requestRole(self, ctx, role:discord.Role):
-	# 	await ctx.send('Requesting role, standby')
-	# 	await ctx.guild.owner.create_dm()
-	# 	reqMsg = await ctx.guild.owner.dm_channel.send("""User {0.author.name} is requesting the {1} role '+ 
-	# 		in the {0.guild.name} server""".format(ctx, role.name))
-	# 	await reqMsg.add_reaction('✅')
-	# 	await reqMsg.add_reaction('❌')
-
-	# 	async def giveRole(ctx):
-	# 		await ctx.author.add_roles(role)
-	# 		await ctx.send(f'Request approved by {ctx.guild.owner.name}')
-
-	# 	async def rejectRole(ctx):
-	# 		await ctx.send(f'Request rejected by {ctx.guild.owner.name}')
-
-	# 	optionDict = {'✅':giveRole,'❌':rejectRole}
-	# 	# Returns the check if the reaction is in the optionDict
-	# 	def check(react, user_):
-	# 		return str(react.emoji) in optionDict.keys() and user_==ctx.guild.owner
-	# 	try:
-	# 		react, owner = await self.bot.wait_for('reaction_add', timeout=60, check=check)
-	# 	except asyncio.TimeoutError:
-	# 		await ctx.send('Request timed out :frowning:')
-	# 	else:
-	# 		await optionDict[react.emoji](ctx)
-
-	# @commands.command(name='addRoles', hidden=True, checks=[meCheck])
-	# @commands.has_permissions(manage_roles=True)
-	# async def makeRoles(self, ctx, *, roles):
-	# 	for role in str.split(roles):
-	# 		r = await ctx.guild.create_role(name=role, mentionable=True)
-
-	

@@ -97,12 +97,17 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	@commands.command(name='mock', aliases=['mok','moc'], brief='Mocks the person you reply at.', \
 	 usage='To use, type !mock while replying to the message you want to mock.')
 	async def mock(self, ctx):
+		# author_dm = ctx.author.dm_channel
 		await ctx.message.delete()
-		message = await ctx.fetch_message(ctx.message.reference.message_id)
+		try:
+			message = await ctx.fetch_message(ctx.message.reference.message_id)
+		except AttributeError:
+			await ctx.author.send('You need to reply to a message to use !mock')
+			break
 		mockery = ''
 		for i, v in enumerate(message.content):
 			if i % 2 == 0:
-				mockery = mockery + v.swapcase()
+				mockery += v.swapcase()
 			else:
 				mockery = mockery + v
 		await ctx.send(mockery)
@@ -195,7 +200,3 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	async def shutdown(self, ctx):
 		await ctx.send('Shutting down Fam Bot')
 		await ctx.bot.logout()
-
-
-		# https://dan-ball.jp/en/javagame/dust/
-		# .swapcase() to !mock
