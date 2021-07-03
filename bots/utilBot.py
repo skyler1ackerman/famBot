@@ -94,6 +94,19 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 		for _ in range(num):
 			await ctx.send(rString)
 
+	@commands.command(name='mock', aliases=['mok','moc'], brief='Mocks the person you reply at.', \
+	 usage='To use, type !mock while replying to the message you want to mock.')
+	async def mock(self, ctx):
+		await ctx.message.delete()
+		message = await ctx.fetch_message(ctx.message.reference.message_id)
+		mockery = ''
+		for i, v in enumerate(message.content):
+			if i % 2 == 0:
+				mockery = mockery + v.swapcase()
+			else:
+				mockery = mockery + v
+		await ctx.send(mockery)
+
 	@commands.command(name='joke', aliases=['j'], brief='Tells jokes to the user!', \
 		usage='!j to hear a joke!')
 	async def joke(self, ctx):
@@ -113,7 +126,7 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	@commands.command(name='MB', brief='Tells a very long joke', \
 		usage='to tell a fantastic joke. Can only be activated by @HailOfPb', \
 		checks=[dadCheck])
-	async def moAndBo(self,ctx):
+	async def moAndBo(self, ctx):
 		with open('data/M_B.txt', 'r') as f:
 			for line in tokenize.sent_tokenize(f.read()):
 				await ctx.send(line)
