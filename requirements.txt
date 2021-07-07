@@ -1,0 +1,13 @@
+shortuuid==1.0.1
+nltk==3.5
+discord.py==1.6.0
+requests==2.25.1
+cleverbotfree==1.2.7
+gTTS==2.2.2
+emoji==1.2.0
+googletrans==3.1.0a0
+beautifulsoup4==4.9.3
+discord==1.7.3
+PyGithub==1.55
+python_dateutil==2.8.1
+secrets==1.0.2

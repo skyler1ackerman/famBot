@@ -186,7 +186,7 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	@commands.command(name='loveme', aliases = ['lm'], brief='Let\'s you know how the bot feels about you')
 	async def loveme(self, ctx):
 		loveList = ['I love you {}', 'Please {}, have my kids', 'There\'s no one I love more than {}'
-		'I could get lost in {}\'s eyes', 'What if me and {} put our mine']
+		'I could get lost in {}\'s eyes', 'What if me and {} put our minecraft beds together?']
 		await ctx.send(choice(loveList).format(ctx.author.mention))
 		
 	@commands.command(name='inactMem', aliases=['im'], brief='Tells you how many users are inactive', \
