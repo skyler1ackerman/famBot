@@ -7,6 +7,11 @@ FamBot has a wide variety of unrealted functionality, as well as a custom help m
 
 ## Table of contents
 
+[Setup](#Setup)
+[Dependencies](#Dependencies)
+[Usage](#Usage)
+[Architecture](Architecture)
+
 ## Setup
 
 First, you will need to obtain a token for your bot. To do this, go to the [discord developer portal](https://discord.com/developers/docs/intro), make a new application, then create a bot. From there you should be able to grab the token. For a step by step guide, please consult [this page](https://www.writebots.com/discord-bot-token/).
