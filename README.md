@@ -8,8 +8,11 @@ FamBot has a wide variety of unrealted functionality, as well as a custom help m
 ## Table of contents
 
 [Setup](#Setup)
+
 [Dependencies](#Dependencies)
+
 [Usage](#Usage)
+
 [Architecture](Architecture)
 
 ## Setup
