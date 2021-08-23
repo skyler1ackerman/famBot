@@ -5,13 +5,19 @@ from nltk import tokenize
 from .common import *
 from random import choice
 from github import Github
-from config import GITHUB_TOKEN
+try:
+	from config import GITHUB_TOKEN
+except:
+	print('No github token!')
 from gtts import gTTS
 
 me = discord.Client()
 
-g = Github(GITHUB_TOKEN)
-famBot = g.get_repo('skyler1ackerman/famBot')
+try:
+	g = Github(GITHUB_TOKEN)
+	famBot = g.get_repo('skyler1ackerman/famBot')
+except:
+	print('Github non-functional')
 
 def setup(bot):
 	bot.add_cog(UtilBot(bot))
@@ -37,7 +43,7 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 		vc.play(myFile)
 		while vc.is_playing():
 			await asyncio.sleep(1)
-		await ctx.message.guild.voice_client.disconnect()
+		await vc.disconnect()
 
 	@commands.Cog.listener()
 	async def on_message(self, message):
