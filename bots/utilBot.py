@@ -1,4 +1,6 @@
 import asyncio, datetime, unicodedata, re, secrets # , ffmpeg, youtube_dl
+from googletrans import Translator
+from googletrans import LANGUAGES as langs
 from dateutil.parser import parse
 from random import choice
 from nltk import tokenize
@@ -28,16 +30,30 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 		# Init the bot
 		self.bot = bot
 
-	# @commands.command(name='anon', help='Send an anonymous message to a given channel in a given server')
-	# async def anonymousMessage(self, ctx, guild, channel, *, message):
-	# 	ctx.bot.fetch_guilds().get(name=guild)
+	@commands.command(name='listLan', aliases=['ll'])
+	async def listLan(self, ctx):
+		emb = discord.Embed(title='All Languages', color=discord.Color.blue(), \
+				description=f'All the languages you can transate to')
+		for code, lang in langs.items():
+			emb.add_field(name=lang.capitalize(), \
+				value=code, inline=True)
+		await ctx.send(embed=emb)
 
+	@commands.command(name='translate', aliases=['tr'], help='Translates a message')
+	async def translate(self, ctx, dest='en'):
+		translator = Translator() # Do this only the first time?
+		try:
+			message = await ctx.fetch_message(ctx.message.reference.message_id)
+		except AttributeError:
+			await ctx.send('Please reply to a mesage you want to translate', reference=ctx.message)
+			return
+		await ctx.send(translator.translate(message.content, dest=dest).text, reference=message)
 
 	@commands.command(name='read', help="""Run with !read <message> to have the bot read your message in whatever 
 		channel you're in. Must be connected to a channel to use.""", \
 		brief='Reads a message into a voice channel')
 	async def read(self, ctx):
-		gTTS(text=ctx.message.content.partition(' ')[2], lang='en', slow=False, tld='co.in').save('data/mp3/reader.mp3')
+		gTTS(text=ctx.message.content.partition(' ')[2], lang='en', slow=False, tld='co.za').save('data/mp3/reader.mp3')
 		myFile = discord.FFmpegPCMAudio(executable="C:/FFmpeg/bin/ffmpeg.exe", source='data/mp3/reader.mp3')
 		vc = await ctx.author.voice.channel.connect()
 		vc.play(myFile)
@@ -176,7 +192,7 @@ class UtilBot(commands.Cog, description='General Utility Functions'):
 	@commands.command(name='loveme', aliases = ['lm'], brief='Let\'s you know how the bot feels about you')
 	async def loveme(self, ctx):
 		loveList = ['I love you {}', 'Please {}, have my kids', 'There\'s no one I love more than {}'
-		'I could get lost in {}\'s eyes', 'What if me and {} put our mine']
+		'I could get lost in {}\'s eyes', 'What if me and {} put our minecraft beds together?']
 		await ctx.send(choice(loveList).format(ctx.author.mention))
 		
 	@commands.command(name='inactMem', aliases=['im'], brief='Tells you how many users are inactive', \
